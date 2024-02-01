@@ -3,3 +3,4 @@ using System.Runtime.CompilerServices;
 
 Console.WriteLine("Moikka maailma");
 Console.WriteLine("Tervehdys kaikille tämä on Inkan testi kirjoitus");
+Console.WriteLine("Terve! Eveliina testaa.");
