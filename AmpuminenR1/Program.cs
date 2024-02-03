@@ -9,3 +9,6 @@ Console.WriteLine("Tämä on testirivi - Jiska");
 
 int numero = 200;
 Console.WriteLine(numero);
+
+int isonro = 1000;
+Console.WriteLine(isonro);
