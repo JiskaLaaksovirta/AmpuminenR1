@@ -7,5 +7,5 @@ Console.WriteLine("Terve! Eveliina testaa.");
 
 Console.WriteLine("Tämä on testirivi - Jiska");
 
-int numero = 200;
+int numero = 130;
 Console.WriteLine(numero);
