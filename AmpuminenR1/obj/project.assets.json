@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Eve\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\AmpuminenR1\\AmpuminenR1.csproj",
+      "projectUniqueName": "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\AmpuminenR1\\AmpuminenR1.csproj",
       "projectName": "AmpuminenR1",
-      "projectPath": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\AmpuminenR1\\AmpuminenR1.csproj",
-      "packagesPath": "C:\\Users\\Eve\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\AmpuminenR1\\obj\\",
+      "projectPath": "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\AmpuminenR1\\AmpuminenR1.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\AmpuminenR1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Eve\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
