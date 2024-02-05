@@ -15,3 +15,6 @@ Console.WriteLine(numero);
 
 Console.WriteLine(isonro + numero);
 Console.WriteLine("Laskettu luvut.");
+
+int uusiNro = 2024;
+Console.WriteLine("Tein tälle uuden luvun");
