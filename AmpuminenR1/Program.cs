@@ -15,3 +15,4 @@ Console.WriteLine(numero);
 
 Console.WriteLine(isonro + numero);
 Console.WriteLine("Laskettu luvut.");
+Console.WriteLine("Samanaikainen muutos");
