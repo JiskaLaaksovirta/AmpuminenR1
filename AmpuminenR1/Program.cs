@@ -15,4 +15,10 @@ Console.WriteLine(numero);
 
 Console.WriteLine(isonro + numero);
 Console.WriteLine("Laskettu luvut.");
+<<<<<<< HEAD
 Console.WriteLine("Samanaikainen muutos");
+=======
+
+int uusiNro = 2024;
+Console.WriteLine("Tein tälle uuden luvun");
+>>>>>>> 8c929f8ba84f2d02dc694b674efc5f1e9df2155d
