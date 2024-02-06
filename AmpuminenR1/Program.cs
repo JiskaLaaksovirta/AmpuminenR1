@@ -23,3 +23,5 @@ Console.WriteLine("Tein tälle uuden luvun");
 int numero2 = 24;
 Console.WriteLine(uusiNro - numero2);
 Console.WriteLine("Luku lisätty ja vähennetty edellisen kanssa");
+
+Console.WriteLine("Tämä on testirivi selaimessa - Inka");
