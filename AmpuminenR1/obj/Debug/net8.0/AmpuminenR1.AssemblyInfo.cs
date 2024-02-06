@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AmpuminenR1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8dd0816ae045aac485d6394ff65dcb6e8e23253")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7644b4674c77ce68518037f05db7fb0c727d459")]
 [assembly: System.Reflection.AssemblyProductAttribute("AmpuminenR1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AmpuminenR1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
