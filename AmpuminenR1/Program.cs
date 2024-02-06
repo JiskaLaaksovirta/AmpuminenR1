@@ -30,4 +30,3 @@ Console.WriteLine("Tämä on testirivi selaimessa - Inka");
 Console.WriteLine("Tämä on testirivi selaimessa2- Inka");
 
 Console.WriteLine("Tämä on testirivi selaimessa - K");
-Console.WriteLine("Tämä on testirivi selaimessa2 - K");
