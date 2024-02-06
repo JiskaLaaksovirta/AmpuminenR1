@@ -25,3 +25,4 @@ Console.WriteLine(uusiNro - numero2);
 Console.WriteLine("Luku lisätty ja vähennetty edellisen kanssa");
 
 Console.WriteLine("Tämä on testirivi selaimessa - Inka");
+Console.WriteLine("Tämä on testirivi selaimessa2- Inka");
