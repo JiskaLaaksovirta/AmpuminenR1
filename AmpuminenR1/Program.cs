@@ -1,5 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System.Runtime.CompilerServices;
+﻿/// See https://aka.ms/new-console-template for more information
+/*using System.Runtime.CompilerServices;
 
 Console.WriteLine("Moikka maailma, tämä on Jiskan kirjoitus");
 Console.WriteLine("Tervehdys kaikille tämä on Inkan testi kirjoitus");
@@ -30,3 +30,51 @@ Console.WriteLine("Tämä on testirivi selaimessa - Inka");
 Console.WriteLine("Tämä on testirivi selaimessa2- Inka");
 
 Console.WriteLine("Tämä on testirivi selaimessa - K");
+*/
+
+using System;
+
+namespace AmmuntaTulokset
+{
+    class Program
+    {
+        static void Main(string[] args)
+
+        {
+            Console.WriteLine("Anna ampujien määrä: ");
+            int ampujienMaara = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Anna kierrosten määrä: ");
+            int kierrostenMaara = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Ampujia on: " + ampujienMaara);
+            Console.WriteLine("Kierroksia: " + kierrostenMaara);
+
+            //Luo taulukko pisteiden tallentamiseen
+            int[,] pisteet = new int[ampujienMaara, kierrostenMaara];
+
+            for (int i = 0; i < ampujienMaara; i++)
+            {
+                Console.WriteLine($"Ampujalla {i + 1}:");
+                for (int j = 0; j < kierrostenMaara; j++)
+                {
+                    Console.Write($"Anna tulokset kierrokselle {j + 1}: ");
+                    pisteet[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+
+            //Tulostaisi pisteet
+            Console.WriteLine("Ampujien pisteet:");
+            for (int i = 0; i < ampujienMaara; i++)
+            {
+                Console.Write($"Ampuja {i + 1}: ");
+                for (int j = 0; j < kierrostenMaara; j++)
+                {
+                    Console.Write($"{pisteet[i, j]} ");
+                }
+                Console.WriteLine();
+
+            }
+        }
+    }
+}
