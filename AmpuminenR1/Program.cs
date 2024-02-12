@@ -39,38 +39,61 @@ namespace AmmuntaTulokset
     class Program
     {
         static void Main(string[] args)
-
         {
-            Console.WriteLine("Anna ampujien määrä: ");
-            int ampujienMaara = int.Parse(Console.ReadLine());
+            int ammuntaEtaisyys, ampujienMaara, kierrostenMaara;
 
-            Console.WriteLine("Anna kierrosten määrä: ");
-            int kierrostenMaara = int.Parse(Console.ReadLine());
+            //Tarkistetaan, että arvot ovat kokonaislukuja.
+            while (true)
+            {
+                Console.WriteLine("Anna ammuntaetäisyys: ");
+                if (int.TryParse(Console.ReadLine(), out ammuntaEtaisyys))
+                    break;
+                else
+                    Console.WriteLine("Virheellinen etäisyys. Anna kokonaisluku.");
+            }
 
+            while (true)
+            {
+                Console.WriteLine("Anna ampujien määrä: ");
+                if (int.TryParse(Console.ReadLine(), out ampujienMaara))
+                    break;
+                else
+                    Console.WriteLine("Virheellinen ampujien määrä. Anna kokonaisluku.");
+            }
+                                   
+            while (true)
+            {
+                Console.WriteLine("Anna kierrosten määrä: ");
+                if (int.TryParse(Console.ReadLine(), out kierrostenMaara))
+                    break;
+                else
+                    Console.WriteLine("Virheellinen kierrosten määrä. Anna kokonaisluku.");
+            }
+
+            Console.WriteLine("Ammuntaetäisyys: " + ammuntaEtaisyys);
             Console.WriteLine("Ampujia on: " + ampujienMaara);
             Console.WriteLine("Kierroksia: " + kierrostenMaara);
 
             //Luo taulukko pisteiden tallentamiseen
-            int[,] pisteet = new int[ampujienMaara, kierrostenMaara];
-
+            int[,,] pisteet = new int[ammuntaEtaisyys, ampujienMaara, kierrostenMaara];
             for (int i = 0; i < ampujienMaara; i++)
             {
                 Console.WriteLine($"Ampujalla {i + 1}:");
                 for (int j = 0; j < kierrostenMaara; j++)
                 {
                     Console.Write($"Anna tulokset kierrokselle {j + 1}: ");
-                    pisteet[i, j] = int.Parse(Console.ReadLine());
+                    pisteet[ammuntaEtaisyys - 1, i, j] = int.Parse(Console.ReadLine());
                 }
             }
 
-            //Tulostaisi pisteet
+            //Tulostaa pisteet
             Console.WriteLine("Ampujien pisteet:");
             for (int i = 0; i < ampujienMaara; i++)
             {
                 Console.Write($"Ampuja {i + 1}: ");
                 for (int j = 0; j < kierrostenMaara; j++)
                 {
-                    Console.Write($"{pisteet[i, j]} ");
+                    Console.Write($"{pisteet[ammuntaEtaisyys - 1, i, j]} ");
                 }
                 Console.WriteLine();
 
