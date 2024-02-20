@@ -8,6 +8,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ConsoleApp3
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\lahde\OneDrive\Tiedostot\Gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\
+=======
+build_property.ProjectDir = C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\
+>>>>>>> f263b7e332efe5bb9af13f7967926a71c5272090
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

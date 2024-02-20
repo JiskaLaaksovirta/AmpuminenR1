@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OneDrive\\Tiedostot\\HAMK-työt\\C#\\ConsoleApp3\\ConsoleApp3\\ConsoleApp3.csproj": {}
+    "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\ConsoleApp3.csproj": {}
   },
   "projects": {
-    "D:\\OneDrive\\Tiedostot\\HAMK-työt\\C#\\ConsoleApp3\\ConsoleApp3\\ConsoleApp3.csproj": {
+    "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\ConsoleApp3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OneDrive\\Tiedostot\\HAMK-työt\\C#\\ConsoleApp3\\ConsoleApp3\\ConsoleApp3.csproj",
+        "projectUniqueName": "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\ConsoleApp3.csproj",
         "projectName": "ConsoleApp3",
-        "projectPath": "D:\\OneDrive\\Tiedostot\\HAMK-työt\\C#\\ConsoleApp3\\ConsoleApp3\\ConsoleApp3.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\OneDrive\\Tiedostot\\HAMK-työt\\C#\\ConsoleApp3\\ConsoleApp3\\obj\\",
+        "projectPath": "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\ConsoleApp3.csproj",
+        "packagesPath": "C:\\Users\\jiska\\.nuget\\packages\\",
+        "outputPath": "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jiska\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -60,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

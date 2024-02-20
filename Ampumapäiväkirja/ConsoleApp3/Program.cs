@@ -18,7 +18,11 @@ int KäyttäjäValinta = 0;
                     break;
                 //Siirrytään TulostenTarkastelu-luokkaan
                 case 2:
-                    TulostenTarkastelu.NäytäTulokset(ampumapäiväkirja);
+                    Console.WriteLine("Syötä ampujan etunimi: ");
+                    string etunimi = Console.ReadLine();
+                    Console.WriteLine("Syötä ampujan sukunimi: ");
+                    string sukunimi = Console.ReadLine();
+                    TulostenTarkastelu.HaeTulokset(ampumapäiväkirja, etunimi, sukunimi);
                     break;
                 //Sammutetaan ohjelma
                 case 3:
