@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\ConsoleApp3.csproj": {}
+    "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\ConsoleApp3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\ConsoleApp3.csproj": {
+    "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\ConsoleApp3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\ConsoleApp3.csproj",
+        "projectUniqueName": "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\ConsoleApp3.csproj",
         "projectName": "ConsoleApp3",
-        "projectPath": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\ConsoleApp3.csproj",
-        "packagesPath": "C:\\Users\\Eve\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\obj\\",
+        "projectPath": "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\ConsoleApp3.csproj",
+        "packagesPath": "C:\\Users\\jiska\\.nuget\\packages\\",
+        "outputPath": "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirja\\ConsoleApp3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Eve\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jiska\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
