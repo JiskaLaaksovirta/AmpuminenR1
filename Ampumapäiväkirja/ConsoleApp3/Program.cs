@@ -1,5 +1,9 @@
 ﻿
-List<Ampuja> ampumapäiväkirja = [];
+using System.Text.Json;
+string fileName = "Ampumatulokset.json";
+List<Ampuja> ampumapäiväkirja = File.Exists(fileName)?JsonSerializer.Deserialize<List<Ampuja>>(File.ReadAllText(fileName)):[];
+
+
 int KäyttäjäValinta = 0;
     //Aloitusvalikko
     do
@@ -38,6 +42,5 @@ int KäyttäjäValinta = 0;
     //Tämä sammuttaa sovelluksen
     } while (KäyttäjäValinta != 3);
 
-
-
-
+string jsonString = JsonSerializer.Serialize(ampumapäiväkirja);
+File.WriteAllText(fileName, jsonString);

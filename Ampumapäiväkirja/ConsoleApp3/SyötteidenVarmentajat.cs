@@ -7,7 +7,7 @@
         double result;
         while (!double.TryParse(Console.ReadLine(), out result))
         {
-            Console.WriteLine("Virheellinen syöte. Syötä uudelleen.");
+            Console.WriteLine("Virheellinen syöte. Syötä vain numeroita.");
         }
         return result;
     }
@@ -17,7 +17,7 @@
         int result;
         while (!int.TryParse(Console.ReadLine(), out result))
         {
-            Console.WriteLine("Virheellinen syöte. Syötä uudelleen.");
+            Console.WriteLine("Virheellinen syöte. Syötä vain numeroita.");
         }
         return result;
     }
