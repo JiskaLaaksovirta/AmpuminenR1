@@ -31,9 +31,11 @@
         }
     }
 
+    //Laitoin päivämäärän olemaan ensimmäinen
+
     private static void TulostaTulos(Ampuja ampuja)
     {
-        Console.WriteLine($"Ampuja: {ampuja.Etunimi} {ampuja.Sukunimi}, Päivämäärä: {ampuja.Päivämäärä.ToShortDateString()}" +
+        Console.WriteLine($"Päivämäärä:{ampuja.Päivämäärä.ToShortDateString()}, Ampuja:{ampuja.Etunimi} {ampuja.Sukunimi}," +
                           $"\nRadan pituus: {ampuja.RataPituus}m, " +
                           $"Laukausten määrä: {ampuja.LaukaustenMäärä}, Kokonaistulos: {ampuja.Kokonaistulos} \n");
 

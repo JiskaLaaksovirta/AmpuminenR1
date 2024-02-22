@@ -1,8 +1,9 @@
 ﻿
 // Täällä kaikki mitä me halutaan ampujalta kysyä
-class Ampuja(string etunimi, string sukunimi, 
-    DateTime päivämäärä, double rataPituus, 
-    int laukaustenMäärä, double kokonaistulos, 
+
+class Ampuja(string etunimi, string sukunimi,
+    DateTime päivämäärä, double rataPituus,
+    int laukaustenMäärä, double kokonaistulos,
     string ammunnankuvaus)
 {
     public string Etunimi { get; } = etunimi;
