@@ -22,7 +22,7 @@
         return result;
     }
 
-    // Ja tällä sitten taas ettei nimi voi olla numeroita
+    // Ja tällä sitten taas ettei nimessä voi olla numeroita
     public static string NimenTarkistus(string nameType)
     {
         string name;

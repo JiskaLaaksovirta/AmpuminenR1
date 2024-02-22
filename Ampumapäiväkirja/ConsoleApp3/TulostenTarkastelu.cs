@@ -35,7 +35,7 @@
 
     private static void TulostaTulos(Ampuja ampuja)
     {
-        Console.WriteLine($"Päivämäärä:{ampuja.Päivämäärä.ToShortDateString()}, Ampuja:{ampuja.Etunimi} {ampuja.Sukunimi}," +
+        Console.WriteLine($"\nPäivämäärä: {ampuja.Päivämäärä.ToShortDateString()}, Ampuja: {ampuja.Etunimi} {ampuja.Sukunimi}," +
                           $"\nRadan pituus: {ampuja.RataPituus}m, " +
                           $"Laukausten määrä: {ampuja.LaukaustenMäärä}, Kokonaistulos: {ampuja.Kokonaistulos} \n");
 
