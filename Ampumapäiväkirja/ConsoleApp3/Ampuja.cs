@@ -1,5 +1,4 @@
-﻿
-// Täällä kaikki mitä me halutaan ampujalta kysyä
+﻿// Täällä kaikki mitä me halutaan ampujalta kysyä
 
 class Ampuja(string etunimi, string sukunimi,
     DateTime päivämäärä, double rataPituus,

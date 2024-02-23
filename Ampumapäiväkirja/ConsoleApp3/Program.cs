@@ -1,5 +1,5 @@
-﻿
-using System.Text.Json;
+﻿using System.Text.Json;
+
 string fileName = "Ampumatulokset.json";
 List<Ampuja> ampumapäiväkirja = File.Exists(fileName)?JsonSerializer.Deserialize<List<Ampuja>>(File.ReadAllText(fileName)):[];
 
