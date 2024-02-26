@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ampumapäiväkirjakonsoli"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1500" Width="1500">
     <Grid>
-
+        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="922" Height="853" Background="#78866B"/>
+        <Button Content="Aloita tulosten kirjaaminen" HorizontalAlignment="Left" Margin="289,18,0,0" VerticalAlignment="Top" Height="60" Width="127" Background="#78866B" Click="AloitaKirjaaminen_Click"/>
+        <Button Content="Näytä tulokset" HorizontalAlignment="Left" Margin="566,18,0,0" VerticalAlignment="Top" Width="127" Height="60" Background="#78866B" Click="NäytäTulokset_Click"/>
+        <TextBox HorizontalAlignment="Left" Margin="1283,23,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="143" Height="60" Background="#78866B"/>
+        <Button Content="Sulje ohjelma" HorizontalAlignment="Left" Margin="1049,23,0,0" VerticalAlignment="Top" Height="60" Width="131" Click="SuljeOhjelma_Click"/>
     </Grid>
 </Window>

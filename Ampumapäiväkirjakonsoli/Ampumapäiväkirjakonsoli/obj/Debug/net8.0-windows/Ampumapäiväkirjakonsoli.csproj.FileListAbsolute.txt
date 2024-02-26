@@ -1,0 +1,7 @@
+C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Arvojenkysyntä.baml
+C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampujataulukko.g.cs
+C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Arvojenkysyntä.g.cs
+C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\App.g.cs
+C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli_MarkupCompile.cache
+C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli_MarkupCompile.lref

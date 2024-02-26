@@ -1,24 +1,50 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using System.Text.Json;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Ampumapäiväkirjakonsoli
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        string fileName = "Ampumatulokset.json";
+        List<Ampuja> ampumapäiväkirja = new List<Ampuja>();
+
+        private void AloitaKirjaaminen_Click(object sender, RoutedEventArgs e)
+        {
+            Arvojenkysyntä arvojenkysyntä = new Arvojenkysyntä();
+            arvojenkysyntä.ShowDialog(); // Avaa uuden ikkunan modaalina
+        }
+
+        private void NäytäTulokset_Click(object sender, RoutedEventArgs e)
+        {
+            string etunimi = InputBox("Syötä ampujan etunimi:");
+            string sukunimi = InputBox("Syötä ampujan sukunimi:");
+            TulostenTarkastelu.HaeTulokset(ampumapäiväkirja, etunimi, sukunimi);
+        }
+
+        private void SuljeOhjelma_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private string InputBox(string prompt)
+        {
+            Console.WriteLine(prompt);
+            return Console.ReadLine();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            string jsonString = JsonSerializer.Serialize(ampumapäiväkirja);
+            File.WriteAllText(fileName, jsonString);
         }
     }
 }
