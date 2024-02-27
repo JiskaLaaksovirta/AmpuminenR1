@@ -10,15 +10,9 @@
     <Compile Update="Ampujataulukko.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Arvojenkysyntä.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Ampujataulukko.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Arvojenkysyntä.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

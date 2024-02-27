@@ -15,19 +15,20 @@ namespace Ampumapäiväkirjakonsoli
         }
 
         string fileName = "Ampumatulokset.json";
-        List<Ampuja> ampumapäiväkirja = new List<Ampuja>();
+        List<Ampuja> ampumapäiväkirja = new();
 
         private void AloitaKirjaaminen_Click(object sender, RoutedEventArgs e)
         {
-            Arvojenkysyntä arvojenkysyntä = new Arvojenkysyntä();
-            arvojenkysyntä.ShowDialog(); // Avaa uuden ikkunan modaalina
+            Ampujataulukko ampujataulukko = new Ampujataulukko();
+            ampujataulukko.Show();
+
+            // Lähetetään ampumapäiväkirjan tiedot Ampujataulukko-ikkunaan
+            ampujataulukko.DataContext = ampumapäiväkirja;
+            this.Close();
         }
 
         private void NäytäTulokset_Click(object sender, RoutedEventArgs e)
         {
-            string etunimi = InputBox("Syötä ampujan etunimi:");
-            string sukunimi = InputBox("Syötä ampujan sukunimi:");
-            TulostenTarkastelu.HaeTulokset(ampumapäiväkirja, etunimi, sukunimi);
         }
 
         private void SuljeOhjelma_Click(object sender, RoutedEventArgs e)

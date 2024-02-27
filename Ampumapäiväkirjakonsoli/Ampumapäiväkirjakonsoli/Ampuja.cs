@@ -1,25 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ampumapäiväkirjakonsoli
 {
-    // Täällä kaikki mitä me halutaan ampujalta kysyä
-
-    class Ampuja(string etunimi, string sukunimi,
-        DateTime päivämäärä, double rataPituus,
-        int laukaustenMäärä, double kokonaistulos,
-        string ammunnankuvaus)
+    public class Ampuja
     {
-        public string Etunimi { get; } = etunimi;
-        public string Sukunimi { get; } = sukunimi;
-        public DateTime Päivämäärä { get; } = päivämäärä;
-        public double RataPituus { get; } = rataPituus;
-        public int LaukaustenMäärä { get; } = laukaustenMäärä;
-        public double Kokonaistulos { get; } = kokonaistulos;
-        public string AmmunnanKuvaus { get; } = ammunnankuvaus;
-    }
+        // Ominaisuudet ampujan tiedoille
+        public string Etunimi { get; set; }
+        public string Sukunimi { get; set; }
+        public DateTime Päivämäärä { get; set; }
+        public double AmpumaradanPituus { get; set; }
+        public int LaukaustenMäärä { get; set; }
+        public double Kokonaistulos { get; set; }
+        public string AmmunnanKuvaus { get; set; }
 
+        // Parametriton konstruktori
+        public Ampuja()
+        {
+            // Voit lisätä tarvittaessa lisätoimintoja tähän
+        }
+
+        // Konstruktori, joka ottaa parametreina ampujan tiedot
+        public Ampuja(string etunimi, string sukunimi, DateTime päivämäärä, double ampumaradanPituus, int laukaustenMäärä, double kokonaistulos, string ammunnankuvaus)
+        {
+            Etunimi = etunimi;
+            Sukunimi = sukunimi;
+            Päivämäärä = päivämäärä;
+            AmpumaradanPituus = ampumaradanPituus;
+            LaukaustenMäärä = laukaustenMäärä;
+            Kokonaistulos = kokonaistulos;
+            AmmunnanKuvaus = ammunnankuvaus;
+        }
+    }
 }
