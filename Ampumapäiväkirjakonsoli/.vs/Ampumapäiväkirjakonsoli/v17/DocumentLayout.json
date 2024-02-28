@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumap\u00E4iv\u00E4kirjakonsoli\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B8743054-1027-41CA-9272-594F0F6FC1CE}|Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampumap\u00E4iv\u00E4kirjakonsoli.csproj|c:\\users\\eve\\documents\\hamk\\ohjelmistoprojekti\\ampuminenr1\\ampumap\u00E4iv\u00E4kirjakonsoli\\ampumap\u00E4iv\u00E4kirjakonsoli\\ampujataulukko.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B8743054-1027-41CA-9272-594F0F6FC1CE}|Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampumap\u00E4iv\u00E4kirjakonsoli.csproj|solutionrelative:ampumap\u00E4iv\u00E4kirjakonsoli\\ampujataulukko.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B8743054-1027-41CA-9272-594F0F6FC1CE}|Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampumap\u00E4iv\u00E4kirjakonsoli.csproj|c:\\users\\eve\\documents\\hamk\\ohjelmistoprojekti\\ampuminenr1\\ampumap\u00E4iv\u00E4kirjakonsoli\\ampumap\u00E4iv\u00E4kirjakonsoli\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B8743054-1027-41CA-9272-594F0F6FC1CE}|Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampumap\u00E4iv\u00E4kirjakonsoli.csproj|solutionrelative:ampumap\u00E4iv\u00E4kirjakonsoli\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,7 +30,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Ampujataulukko.xaml",
+              "DocumentMoniker": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampujataulukko.xaml",
+              "RelativeDocumentMoniker": "Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampujataulukko.xaml",
+              "ToolTip": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampujataulukko.xaml",
+              "RelativeToolTip": "Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampujataulukko.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-02-28T16:47:48.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampumap\u00E4iv\u00E4kirjakonsoli\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Ampumap\u00E4iv\u00E4kirjakonsoli\\MainWindow.xaml.cs",
@@ -38,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampumap\u00E4iv\u00E4kirjakonsoli\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Ampumap\u00E4iv\u00E4kirjakonsoli\\MainWindow.xaml",

@@ -13,7 +13,6 @@
             <TextBox x:Name="txtNykyinenAika" Width="150" Grid.Row="0" Margin="10" Background="#78866B"/>
             <Button Content="Sulje ohjelma" Height="55" Width="150" Margin="10" Click="SuljeOhjelma_Click"/>
         </StackPanel>
-        <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="688" Height="616" Background="#78866B"/>
-        <TextBox HorizontalAlignment="Left" Margin="1283,23,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="143" Height="60" Background="#78866B"/>
+        <TextBox HorizontalAlignment="Center" Margin="150" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="700" Height="600" Background="#78866B"/>
     </Grid>
 </Window>
