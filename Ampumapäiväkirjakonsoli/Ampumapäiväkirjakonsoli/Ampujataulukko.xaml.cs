@@ -7,12 +7,16 @@ namespace Ampumapäiväkirjakonsoli
 
     public partial class Ampujataulukko : Window
     {
+        List<Ampuja> ampumapäiväkirja = [];
+        private MainWindow mainWindow;
 
-        List<Ampuja> ampumapäiväkirja = new List<Ampuja>();
-
-        public Ampujataulukko()
+        public Ampujataulukko( List<Ampuja> ampumapäiväkirja, MainWindow mainWindow)
         {
             InitializeComponent();
+            this.ampumapäiväkirja = ampumapäiväkirja;
+            this.mainWindow = mainWindow;
+
+            this.DataContext = this.ampumapäiväkirja;
             txtNykyinenAika.Text = DateTime.Now.ToString();
         }
 
@@ -20,100 +24,71 @@ namespace Ampumapäiväkirjakonsoli
         {
             LisääRivejäDataGridiin();
         }
+        private void PoistuPäävalikkoon_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.Show();
+            this.Close();
+        }
 
         private void LisääRivejäDataGridiin()
         {
-            dataGrid.Items.Clear();
-
-            // Tarkista, että txtAmpujienMäärä-kenttässä on syöte ja että se voidaan muuntaa kokonaisluvuksi
             if (int.TryParse(txtAmpujienMäärä.Text, out int ampumäärä))
             {
-                // Lisää rivejä DataGridiin ampumäärän mukaan
                 for (int i = 0; i < ampumäärä; i++)
                 {
-                    // Luo uusi Ampuja-olio ja lisää se DataGridiin
                     var uusiAmpuja = new Ampuja();
                     dataGrid.Items.Add(uusiAmpuja);
                 }
             }
             else
             {
-                // Jos syöte ei ole kelvollinen, näytä virheviesti
-                MessageBox.Show("Syötä kokonaisluku ampujien määrä-kenttään.");
+                MessageBox.Show("Syötä kelvollinen ampujien määrä.");
             }
         }
+
         private void TallennaTiedot_Click(object sender, RoutedEventArgs e)
         {
-            TallennaAmpujat();
-        }
-
-        private void TallennaAmpujat()
-        {
-            // Tarkista, että kaikki tarvittavat tiedot on annettu
-            if (!string.IsNullOrEmpty(txtAmpumaradanPituus.Text) &&
-                !string.IsNullOrEmpty(txtAmpujienMäärä.Text) &&
-                !string.IsNullOrEmpty(txtLaukaustenMäärä.Text))
+            if (!double.TryParse(txtAmpumaradanPituus.Text, out double ampumaradanPituus))
             {
-                // Muunna tekstilaatikoiden sisältö sopiviksi tyypeiksi ja tallenna ne ampumapäiväkirjaan
-                double ampumaradanPituus = double.Parse(txtAmpumaradanPituus.Text);
-                int laukaustenMäärä = int.Parse(txtLaukaustenMäärä.Text);
+                MessageBox.Show("Syötä kelvollinen ampumaradan pituus.");
+                return;
+            }
 
-                var uusiAmpuja = new Ampuja
-                {
-                    AmpumaradanPituus = ampumaradanPituus,
-                    LaukaustenMäärä = laukaustenMäärä,
-                    Päivämäärä = DateTime.Now,
-                };
-                
+            // Käy läpi kaikki DataGrid-komponentissa olevat rivit
             foreach (var item in dataGrid.Items)
             {
-                if (item is Ampuja)
+                if (item is Ampuja ampujaDataGridista)
                 {
-                    var ampuma = (Ampuja)item;
-
-                    // Täytä etunimen tallennus DataGridistä
-                    if (dataGrid.Columns[0].GetCellContent(item) is TextBox etunimiGridi)
+                    // Luo uusi Ampuja-olio jokaiselle riville
+                    var uusiAmpuja = new Ampuja
                     {
-                        ampuma.Etunimi = etunimiGridi.Text;
-                    }
+                        Etunimi = ampujaDataGridista.Etunimi,
+                        Sukunimi = ampujaDataGridista.Sukunimi,
+                        Päivämäärä = DateTime.Now, // Aseta nykyinen päivämäärä ampumakerralle
+                        AmpumaradanPituus = ampumaradanPituus,
+                        LaukaustenMäärä = ampujaDataGridista.LaukaustenMäärä,
+                        Kokonaistulos = ampujaDataGridista.Kokonaistulos,
+                        AmmunnanKuvaus = ampujaDataGridista.AmmunnanKuvaus
+                    };
 
-                    // Täytä sukunimen tallennus DataGridistä
-                    if (dataGrid.Columns[1].GetCellContent(item) is TextBox sukunimiGridi)
-                    {
-                        ampuma.Sukunimi = sukunimiGridi.Text;
-                    }
-
-                    // Täytä kokonaistuloksen tallennus DataGridistä
-                    if (dataGrid.Columns[2].GetCellContent(item) is TextBox KokonaistulosGridi)
-                    {
-                        if (double.TryParse(KokonaistulosGridi.Text, out double kokonaistulos))
-                        {
-                            ampuma.Kokonaistulos = kokonaistulos;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Virheellinen kokonaistulos.");
-                            return;
-                        }
-                    }
+                    // Lisää uusi ampuja ampumapäiväkirja-listaan
+                    ampumapäiväkirja.Add(uusiAmpuja);
                 }
             }
 
-            // Lisää uusi Ampuja-olio ampumapäiväkirjaan
-            ampumapäiväkirja.Add(uusiAmpuja);
-
-            // Ilmoitus käyttäjälle, että tiedot tallennettiin
             MessageBox.Show("Ammunnan tiedot tallennettu!");
-
-            // Tyhjennä tekstikentät tallennuksen jälkeen
-            txtAmpumaradanPituus.Text = "";
-            txtLaukaustenMäärä.Text = "";
-            txtAmpujienMäärä.Text = "";
-
-            // Tyhjennä DataGrid
-            dataGrid.Items.Clear();
-
-            }
+            TyhjennäKentät(); // Tyhjennä kentät tallennuksen jälkeen
         }
+
+        private void TyhjennäKentät()
+        {
+            // Tyhjennä kaikki kentät tallennuksen jälkeen
+            txtAmpumaradanPituus.Text = string.Empty;
+            txtAmpujienMäärä.Text = string.Empty;
+            txtKuvaus.Text = string.Empty;
+            dataGrid.Items.Clear(); // Tyhjennä DataGridin rivit
+        }
+
+
     }
 }

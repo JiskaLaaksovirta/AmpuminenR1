@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Kirjaus.cs" />
     <Compile Remove="TulostenTarkastelu.cs" />
   </ItemGroup>
 

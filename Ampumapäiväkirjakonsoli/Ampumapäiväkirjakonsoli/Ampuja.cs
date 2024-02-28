@@ -1,34 +1,116 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace Ampumapäiväkirjakonsoli
 {
-    public class Ampuja
+    public class Ampuja : INotifyPropertyChanged
     {
-        // Ominaisuudet ampujan tiedoille
-        public string Etunimi { get; set; }
-        public string Sukunimi { get; set; }
-        public DateTime Päivämäärä { get; set; }
-        public double AmpumaradanPituus { get; set; }
-        public int LaukaustenMäärä { get; set; }
-        public double Kokonaistulos { get; set; }
-        public string AmmunnanKuvaus { get; set; }
+        private string etunimi;
+        private string sukunimi;
+        private DateTime päivämäärä;
+        private double ampumaradanPituus;
+        private int laukaustenMäärä;
+        private double kokonaistulos;
+        private string ammunnanKuvaus;
 
-        // Parametriton konstruktori
-        public Ampuja()
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
         {
-            // Voit lisätä tarvittaessa lisätoimintoja tähän
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        // Konstruktori, joka ottaa parametreina ampujan tiedot
-        public Ampuja(string etunimi, string sukunimi, DateTime päivämäärä, double ampumaradanPituus, int laukaustenMäärä, double kokonaistulos, string ammunnankuvaus)
+        public string Etunimi
         {
-            Etunimi = etunimi;
-            Sukunimi = sukunimi;
-            Päivämäärä = päivämäärä;
-            AmpumaradanPituus = ampumaradanPituus;
-            LaukaustenMäärä = laukaustenMäärä;
-            Kokonaistulos = kokonaistulos;
-            AmmunnanKuvaus = ammunnankuvaus;
+            get => etunimi;
+            set
+            {
+                if (etunimi != value)
+                {
+                    etunimi = value;
+                    OnPropertyChanged(nameof(Etunimi));
+                }
+            }
         }
+
+        public string Sukunimi
+        {
+            get => sukunimi;
+            set
+            {
+                if (sukunimi != value)
+                {
+                    sukunimi = value;
+                    OnPropertyChanged(nameof(Sukunimi));
+                }
+            }
+        }
+
+        public DateTime Päivämäärä
+        {
+            get => päivämäärä;
+            set
+            {
+                if (päivämäärä != value)
+                {
+                    päivämäärä = value;
+                    OnPropertyChanged(nameof(Päivämäärä));
+                }
+            }
+        }
+
+        public double AmpumaradanPituus
+        {
+            get => ampumaradanPituus;
+            set
+            {
+                if (ampumaradanPituus != value)
+                {
+                    ampumaradanPituus = value;
+                    OnPropertyChanged(nameof(AmpumaradanPituus));
+                }
+            }
+        }
+
+        public int LaukaustenMäärä
+        {
+            get => laukaustenMäärä;
+            set
+            {
+                if (laukaustenMäärä != value)
+                {
+                    laukaustenMäärä = value;
+                    OnPropertyChanged(nameof(LaukaustenMäärä));
+                }
+            }
+        }
+
+        public double Kokonaistulos
+        {
+            get => kokonaistulos;
+            set
+            {
+                if (kokonaistulos != value)
+                {
+                    kokonaistulos = value;
+                    OnPropertyChanged(nameof(Kokonaistulos));
+                }
+            }
+        }
+
+        public string AmmunnanKuvaus
+        {
+            get => ammunnanKuvaus;
+            set
+            {
+                if (ammunnanKuvaus != value)
+                {
+                    ammunnanKuvaus = value;
+                    OnPropertyChanged(nameof(AmmunnanKuvaus));
+                }
+            }
+        }
+
+        public string KokoNimi => $"{Etunimi} {Sukunimi}";
     }
 }

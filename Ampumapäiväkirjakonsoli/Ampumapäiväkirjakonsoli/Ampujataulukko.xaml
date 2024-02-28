@@ -6,58 +6,64 @@
         xmlns:local="clr-namespace:Ampumapäiväkirjakonsoli"
         mc:Ignorable="d"
         Title="Ampujataulukko" Height="900" Width="1100">
-    <Grid Margin="0,0,0,-6" RenderTransformOrigin="0.551,0.467">
+    <Grid Margin="0,0,0,-6">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="61"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="0"/>
+            <RowDefinition Height="Auto" MinHeight="0"/>
+            <RowDefinition Height="Auto" MinHeight="143"/>
         </Grid.RowDefinitions>
 
-        <Label Content="Nykyinen päivä ja aika:" Margin="514,30,314,113" Grid.Row="0" Grid.RowSpan="5"/>
-        <TextBlock x:Name="txtNykyinenAika" Margin="650,30,325,113" Grid.Row="0" Grid.RowSpan="5"/>
+        <TextBox x:Name="txtNykyinenAika" Margin="190,0,751,0" Grid.Row="0" Background="#78866B"/>
 
         <!-- Ampumapäiväkirjan tietojen syöttö -->
         <Label Content="Ampumaradan pituus (m):" Margin="0,115,829,-10" Grid.Row="4" />
         <TextBox x:Name="txtAmpumaradanPituus"  Margin="146,118,829,-10" Grid.Row="4" />
 
-        <Label Content="Laukausten määrä:" Margin="0,197,829,-80" Grid.Row="4" />
-        <TextBox x:Name="txtLaukaustenMäärä"  Margin="146,197,829,-80" Grid.Row="4"/>
-
         <Label Content="Ampujien määrä:"  Margin="0,156,829,-49" Grid.Row="4" />
         <TextBox x:Name="txtAmpujienMäärä"  Margin="146,156,829,-47" Grid.Row="4"/>
 
+        <Label Content="Kuvaus ammunnasta (valinnainen):" Grid.Row="4" Margin="15,269,839,-260" />
+        <TextBox x:Name="txtKuvaus" Grid.Row="4" Margin="13,303,839,-260" AcceptsTab="True" />
 
-        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Margin="276,40,76,-548" Background="#78866B" Grid.Row="4">
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Margin="276,40,76,-548" Background="#78866B" Grid.Row="4" IsTabStop="True">
             <DataGrid.Columns>
-                <DataGridTemplateColumn Header="Etunimi" Width="33*">
+                <DataGridTemplateColumn Header="Etunimi" Width="25*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBox Text="{Binding Etunimi, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Sukunimi" Width="33*">
+                <DataGridTemplateColumn Header="Sukunimi" Width="25*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBox Text="{Binding Sukunimi, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Kokonaistulos" Width="33*">
+                <DataGridTemplateColumn Header="Kokonaistulos" Width="25*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBox Text="{Binding Kokonaistulos, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Laukausten määrä" Width="25*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding LaukaustenMäärä, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
             </DataGrid.Columns>
         </DataGrid>
 
         <!-- Napit ja tekstilaatikko tulosten näyttämiseen ja ohjelman sulkemiseen -->
-        <Button Content="Aloita tulosten kirjaaminen" HorizontalAlignment="Left" Margin="12,0,0,0" VerticalAlignment="Top" Height="60" Width="173" Background="#78866B" Click="AloitaKirjaaminen_Click" Grid.Row="4"/>
-        <TextBox x:Name="txtTulokset" Grid.Row="4" Margin="23,352,829,-309" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Height="100" IsReadOnly="True"/>
+        <Button Content="Aloita tulosten kirjaaminen" HorizontalAlignment="Left" Margin="12,0,0,0" VerticalAlignment="Top" Height="60" Width="173" Background="#78866B" Click="AloitaKirjaaminen_Click" Grid.Row="2" Grid.RowSpan="3"/>
         <Button Content="Tallenna" HorizontalAlignment="Left" Margin="13,0,0,0" VerticalAlignment="Center" Height="61" Width="172" Click="TallennaTiedot_Click"/>
+        <Button Content="Palaa päävalikkoon" HorizontalAlignment="Left" VerticalAlignment="Center" Height="61" Width="172" Click="PoistuPäävalikkoon_Click" Margin="928,0,0,0"/>
     </Grid>
 </Window>

@@ -21,3 +21,5 @@ C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakons
 C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.pdb
 C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.genruntimeconfig.cache
 C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\ref\Ampumapäiväkirjakonsoli.dll
+C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\TulostenTarkastelu.baml
+C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\TulostenTarkastelu.g.cs
