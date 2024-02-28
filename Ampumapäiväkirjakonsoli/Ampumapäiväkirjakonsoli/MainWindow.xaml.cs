@@ -4,6 +4,7 @@ using System.IO;
 using System.Text;
 using System.Text.Json;
 using System.Windows;
+using System.Windows.Threading;
 
 namespace Ampumapäiväkirjakonsoli
 {
@@ -14,8 +15,17 @@ namespace Ampumapäiväkirjakonsoli
 
         public MainWindow()
         {
-            InitializeComponent();
-            txtNykyinenAika.Text = DateTime.Now.ToString();
+            {
+                InitializeComponent();
+                DispatcherTimer LiveTime = new DispatcherTimer();
+                LiveTime.Interval = TimeSpan.FromSeconds(1);
+                LiveTime.Tick += timer_Tick;
+                LiveTime.Start();
+            }
+            void timer_Tick(object sender, EventArgs e)
+            {
+                Päivämäärä.Text = DateTime.Now.ToString("HH:mm - dddd, MMMM dd, yyyy");
+            }
         }
 
         private void AloitaKirjaaminen_Click(object sender, RoutedEventArgs e)
