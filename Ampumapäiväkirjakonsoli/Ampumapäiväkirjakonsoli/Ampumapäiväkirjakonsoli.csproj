@@ -13,4 +13,12 @@
     <Compile Remove="TulostenTarkastelu.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="camo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="camo.jpg" />
+  </ItemGroup>
+
 </Project>

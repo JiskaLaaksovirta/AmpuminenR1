@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="Ampujataulukko" Height="900" Width="1100">
     <Grid Margin="0,0,0,-6">
+        <Grid.Background>
+            <ImageBrush ImageSource="/camo.jpg" Opacity="0.7" Stretch="UniformToFill"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" MinHeight="61"/>
             <RowDefinition Height="Auto"/>
@@ -15,19 +18,19 @@
             <RowDefinition Height="Auto" MinHeight="143"/>
         </Grid.RowDefinitions>
 
-        <TextBox x:Name="txtNykyinenAika" Margin="190,0,751,0" Grid.Row="0" Background="#78866B"/>
+        <TextBox x:Name="txtNykyinenAika" Margin="190,0,751,0" Grid.Row="0" Background="#FF7A8270"/>
 
         <!-- Ampumapäiväkirjan tietojen syöttö -->
-        <Label Content="Ampumaradan pituus (m):" Margin="0,115,829,-10" Grid.Row="4" />
+        <Label Content="Ampumaradan pituus (m):" Margin="0,115,829,-10" Grid.Row="4" Background="#FFC3C1C1" />
         <TextBox x:Name="txtAmpumaradanPituus"  Margin="146,118,829,-10" Grid.Row="4" />
 
-        <Label Content="Ampujien määrä:"  Margin="0,156,829,-49" Grid.Row="4" />
+        <Label Content="Ampujien määrä:"  Margin="0,156,829,-49" Grid.Row="4" Background="#FFC3C1C1" />
         <TextBox x:Name="txtAmpujienMäärä"  Margin="146,156,829,-47" Grid.Row="4"/>
 
-        <Label Content="Kuvaus ammunnasta (valinnainen):" Grid.Row="4" Margin="15,269,839,-260" />
+        <Label Content="Kuvaus ammunnasta (valinnainen):" Grid.Row="4" Margin="15,269,839,-260" Background="#FFC3C1C1" />
         <TextBox x:Name="txtKuvaus" Grid.Row="4" Margin="13,303,839,-260" AcceptsTab="True" />
 
-        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Margin="276,40,76,-548" Background="#78866B" Grid.Row="4" IsTabStop="True">
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Margin="276,40,68,-676" Background="#FF7A8270" Grid.Row="4" IsTabStop="True" BorderBrush="Black">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Etunimi" Width="25*">
                     <DataGridTemplateColumn.CellTemplate>
@@ -62,8 +65,8 @@
         </DataGrid>
 
         <!-- Napit ja tekstilaatikko tulosten näyttämiseen ja ohjelman sulkemiseen -->
-        <Button Content="Aloita tulosten kirjaaminen" HorizontalAlignment="Left" Margin="12,0,0,0" VerticalAlignment="Top" Height="60" Width="173" Background="#78866B" Click="AloitaKirjaaminen_Click" Grid.Row="2" Grid.RowSpan="3"/>
-        <Button Content="Tallenna" HorizontalAlignment="Left" Margin="13,0,0,0" VerticalAlignment="Center" Height="61" Width="172" Click="TallennaTiedot_Click"/>
-        <Button Content="Palaa päävalikkoon" HorizontalAlignment="Left" VerticalAlignment="Center" Height="61" Width="172" Click="PoistuPäävalikkoon_Click" Margin="928,0,0,0"/>
+        <Button Content="Aloita tulosten kirjaaminen" HorizontalAlignment="Left" Margin="12,0,0,0" VerticalAlignment="Top" Height="60" Width="173" Background="#FF7A8270" Click="AloitaKirjaaminen_Click" Grid.Row="2" Grid.RowSpan="3"/>
+        <Button Content="Tallenna" HorizontalAlignment="Left" Margin="13,0,0,0" VerticalAlignment="Center" Height="61" Width="172" Click="TallennaTiedot_Click" Background="#FFC3C1C1"/>
+        <Button Content="Palaa päävalikkoon" HorizontalAlignment="Left" VerticalAlignment="Center" Height="61" Width="172" Click="PoistuPäävalikkoon_Click" Margin="928,0,0,0" Background="#FFC3C1C1"/>
     </Grid>
 </Window>

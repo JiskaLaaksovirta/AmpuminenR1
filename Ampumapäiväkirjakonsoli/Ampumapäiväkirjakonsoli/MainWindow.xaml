@@ -7,13 +7,35 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="900" Width="1100">
     <Grid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="50">
-            <Button Content="Tulosten kirjaaminen" Height="55" Width="150" Background="#78866B" Margin="10" Click="AloitaKirjaaminen_Click"/>
-            <Button Content="Näytä tulokset" Width="150" Height="55" Background="#78866B" Margin="10" Click="NäytäTulokset_Click"/>
-            <TextBox x:Name="Päivämäärä" Width="150" Grid.Row="0" Margin="10" Background="#78866B"
-         TextAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
-            <Button Content="Sulje ohjelma" Height="55" Width="150" Margin="10" Click="SuljeOhjelma_Click"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="/camo.jpg" Stretch="UniformToFill" Opacity="0.7"/>
+        </Grid.Background>
+        <StackPanel Orientation="Horizontal" Margin="132,55,128,0" Height="90" VerticalAlignment="Top">
+            <StackPanel.BindingGroup>
+                <BindingGroup/>
+            </StackPanel.BindingGroup>
+            <Button Content="Tulosten kirjaaminen" Height="70" Width="180" Background="#FF7A8270" Click="AloitaKirjaaminen_Click" BorderBrush="Black" Margin="10,0,0,0">
+                <Button.BindingGroup>
+                    <BindingGroup/>
+                </Button.BindingGroup>
+            </Button>
+            <Button Content="Näytä tulokset" Width="180" Height="70" Background="#FF7A8270" Margin="30,10,30,10" Click="NäytäTulokset_Click" BorderBrush="Black">
+                <Button.BindingGroup>
+                    <BindingGroup/>
+                </Button.BindingGroup>
+            </Button>
+            <TextBox x:Name="Päivämäärä" Width="180" Grid.Row="0" Margin="0,10,30,10" Background="#FF7A8270"
+         TextAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" BorderBrush="Black">
+                <TextBox.BindingGroup>
+                    <BindingGroup/>
+                </TextBox.BindingGroup>
+            </TextBox>
+            <Button Content="Sulje ohjelma" Height="70" Width="180" Click="SuljeOhjelma_Click" Background="#FFC3C1C1" BorderBrush="Black">
+                <Button.BindingGroup>
+                    <BindingGroup/>
+                </Button.BindingGroup>
+            </Button>
         </StackPanel>
-        <TextBox HorizontalAlignment="Center" Margin="150" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="700" Height="600" Background="#78866B"/>
+        <TextBox Margin="128,150,128,10" TextWrapping="Wrap" Text="TextBox" Background="#FF7A8270" BorderBrush="Black"/>
     </Grid>
 </Window>
