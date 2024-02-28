@@ -7,11 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="900" Width="1100">
     <Grid>
-        <TextBox x:Name="txtNykyinenAika" Margin="599,53,375,776" Grid.Row="0" Background="#78866B"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="50">
+            <Button Content="Tulosten kirjaaminen" Height="55" Width="150" Background="#78866B" Margin="10" Click="AloitaKirjaaminen_Click"/>
+            <Button Content="Näytä tulokset" Width="150" Height="55" Background="#78866B" Margin="10" Click="NäytäTulokset_Click"/>
+            <TextBox x:Name="txtNykyinenAika" Width="150" Grid.Row="0" Margin="10" Background="#78866B"/>
+            <Button Content="Sulje ohjelma" Height="55" Width="150" Margin="10" Click="SuljeOhjelma_Click"/>
+        </StackPanel>
         <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="688" Height="616" Background="#78866B"/>
-        <Button Content="Aloita tulosten kirjaaminen" HorizontalAlignment="Left" Margin="242,53,0,0" VerticalAlignment="Top" Height="55" Width="128" Background="#78866B" Click="AloitaKirjaaminen_Click"/>
-        <Button Content="Näytä tulokset" HorizontalAlignment="Left" Margin="423,53,0,0" VerticalAlignment="Top" Width="127" Height="55" Background="#78866B" Click="NäytäTulokset_Click"/>
         <TextBox HorizontalAlignment="Left" Margin="1283,23,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="143" Height="60" Background="#78866B"/>
-        <Button Content="Sulje ohjelma" HorizontalAlignment="Left" Margin="763,53,0,0" VerticalAlignment="Top" Height="55" Width="131" Click="SuljeOhjelma_Click"/>
     </Grid>
 </Window>

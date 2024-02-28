@@ -23,3 +23,28 @@ C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakons
 C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\ref\Ampumapäiväkirjakonsoli.dll
 C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\TulostenTarkastelu.baml
 C:\Ohjelmistokehitys\Jiskan Gitit\AmpuminenR1\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\TulostenTarkastelu.g.cs
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\bin\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.exe
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\bin\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.deps.json
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\bin\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.runtimeconfig.json
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\bin\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.dll
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\bin\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.pdb
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\TulostenTarkastelu.baml
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampujataulukko.g.cs
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\TulostenTarkastelu.g.cs
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli_MarkupCompile.cache
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli_MarkupCompile.lref
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampujataulukko.baml
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.g.resources
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.AssemblyInfoInputs.cache
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.AssemblyInfo.cs
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.csproj.CoreCompileInputs.cache
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.sourcelink.json
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.dll
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\refint\Ampumapäiväkirjakonsoli.dll
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.pdb
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\Ampumapäiväkirjakonsoli.genruntimeconfig.cache
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\ref\Ampumapäiväkirjakonsoli.dll
