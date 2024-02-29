@@ -1,0 +1,27 @@
+﻿<Window x:Class="Ampumapäiväkirjakonsoli.TulostenTarkastelu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TulostenTarkastelu" Height="900" Width="1100">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Valikko ampujien nimiä varten -->
+        <ComboBox x:Name="cmbAmpujat" HorizontalAlignment="Center" VerticalAlignment="Top"
+          Width="200" Margin="0,10" SelectionChanged="cmbAmpujat_SelectionChanged"/>
+
+        <!-- DataGrid ammunnan tietojen näyttämiseen -->
+        <DataGrid x:Name="dgAmmunnat" Grid.Row="1" AutoGenerateColumns="False" Margin="10,34,10,10" RowHeight="40" Height="auto" MaxHeight="700" Width="Auto" HorizontalScrollBarVisibility="auto" VerticalScrollBarVisibility="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Päivämäärä" Binding="{Binding Päivämäärä}" Width="*" />
+                <DataGridTextColumn Header="Radan pituus" Binding="{Binding AmpumaradanPituus}" Width="*" />
+                <DataGridTextColumn Header="Laukausten määrä" Binding="{Binding LaukaustenMäärä}" Width="*" />
+                <DataGridTextColumn Header="Kokonaistulos" Binding="{Binding Kokonaistulos}" Width="*" />
+                <DataGridTextColumn Header="Ammunnan kuvaus" Binding="{Binding AmmunnanKuvaus}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Palaa päävalikkoon" HorizontalAlignment="Left" VerticalAlignment="Top" Height="61" Width="172" Click="PoistuPäävalikkoon_Click" Margin="918,10,0,0" Grid.RowSpan="2"/>
+    </Grid>
+</Window>

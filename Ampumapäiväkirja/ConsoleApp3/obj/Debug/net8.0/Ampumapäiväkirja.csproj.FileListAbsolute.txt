@@ -1,0 +1,30 @@
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\bin\Debug\net8.0\Ampumapäiväkirja.exe
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\bin\Debug\net8.0\Ampumapäiväkirja.deps.json
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\bin\Debug\net8.0\Ampumapäiväkirja.runtimeconfig.json
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\bin\Debug\net8.0\Ampumapäiväkirja.dll
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\bin\Debug\net8.0\Ampumapäiväkirja.pdb
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.AssemblyInfoInputs.cache
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.AssemblyInfo.cs
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.csproj.CoreCompileInputs.cache
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.sourcelink.json
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.dll
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\refint\Ampumapäiväkirja.dll
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.pdb
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.genruntimeconfig.cache
+C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\ref\Ampumapäiväkirja.dll
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\bin\Debug\net8.0\Ampumapäiväkirja.exe
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\bin\Debug\net8.0\Ampumapäiväkirja.deps.json
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\bin\Debug\net8.0\Ampumapäiväkirja.runtimeconfig.json
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\bin\Debug\net8.0\Ampumapäiväkirja.dll
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\bin\Debug\net8.0\Ampumapäiväkirja.pdb
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.AssemblyInfoInputs.cache
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.AssemblyInfo.cs
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.csproj.CoreCompileInputs.cache
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.sourcelink.json
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.dll
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\refint\Ampumapäiväkirja.dll
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.pdb
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\Ampumapäiväkirja.genruntimeconfig.cache
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirja\ConsoleApp3\obj\Debug\net8.0\ref\Ampumapäiväkirja.dll
