@@ -3,23 +3,34 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="TulostenTarkastelu" Height="900" Width="1100">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/camo.jpg" Opacity="0.7" Stretch="UniformToFill"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!-- Valikko ampujien nimiä varten -->
-        <ComboBox x:Name="cmbAmpujat" HorizontalAlignment="Center" VerticalAlignment="Top"
-          Width="200" Margin="0,10" SelectionChanged="cmbAmpujat_SelectionChanged"/>
+        <ComboBox x:Name="cmbAmpujat" HorizontalAlignment="Center" VerticalAlignment="Top" IsEditable="True" Text="Ampujan valinta" IsReadOnly="True"
+           HorizontalContentAlignment="Center" Width="200" Margin="0,10,0,0" SelectionChanged="cmbAmpujat_SelectionChanged" Height="46" Grid.RowSpan="2"/>
 
         <!-- DataGrid ammunnan tietojen näyttämiseen -->
-        <DataGrid x:Name="dgAmmunnat" Grid.Row="1" AutoGenerateColumns="False" Margin="10,34,10,10" RowHeight="40" Height="auto" MaxHeight="700" Width="Auto" HorizontalScrollBarVisibility="auto" VerticalScrollBarVisibility="Auto">
+        <DataGrid x:Name="dgAmmunnat" Grid.Row="1" AutoGenerateColumns="False" Margin="10,103,10,26"
+          HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+          CanUserAddRows="False" CanUserDeleteRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Päivämäärä" Binding="{Binding Päivämäärä}" Width="*" />
                 <DataGridTextColumn Header="Radan pituus" Binding="{Binding AmpumaradanPituus}" Width="*" />
                 <DataGridTextColumn Header="Laukausten määrä" Binding="{Binding LaukaustenMäärä}" Width="*" />
                 <DataGridTextColumn Header="Kokonaistulos" Binding="{Binding Kokonaistulos}" Width="*" />
-                <DataGridTextColumn Header="Ammunnan kuvaus" Binding="{Binding AmmunnanKuvaus}" Width="*" />
+                <DataGridTemplateColumn Header="Ammunnan kuvaus" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding AmmunnanKuvaus}" TextWrapping="Wrap" IsReadOnly="True" BorderThickness="0" Background="Transparent"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Palaa päävalikkoon" HorizontalAlignment="Left" VerticalAlignment="Top" Height="61" Width="172" Click="PoistuPäävalikkoon_Click" Margin="918,10,0,0" Grid.RowSpan="2"/>
