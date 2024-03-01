@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Threading;
 
 namespace Ampumapäiväkirjakonsoli
 {
@@ -17,7 +18,14 @@ namespace Ampumapäiväkirjakonsoli
             this.mainWindow = mainWindow;
 
             this.DataContext = this.ampumapäiväkirja;
-            txtNykyinenAika.Text = DateTime.Now.ToString();
+            DispatcherTimer LiveTime = new DispatcherTimer();
+            LiveTime.Interval = TimeSpan.FromSeconds(1);
+            LiveTime.Tick += timer_Tick;
+            LiveTime.Start();
+        }
+        void timer_Tick(object sender, EventArgs e)
+        {
+            Päivämäärä.Text = DateTime.Now.ToString("HH:mm - dddd, MMMM dd, yyyy");
         }
 
         private void AloitaKirjaaminen_Click(object sender, RoutedEventArgs e)
@@ -117,5 +125,6 @@ namespace Ampumapäiväkirjakonsoli
             dataGrid.Items.Clear();
 
         }
+
     }
 }

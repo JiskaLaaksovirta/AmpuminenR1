@@ -33,6 +33,6 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Palaa päävalikkoon" HorizontalAlignment="Left" VerticalAlignment="Top" Height="61" Width="172" Click="PoistuPäävalikkoon_Click" Margin="918,10,0,0" Grid.RowSpan="2"/>
+        <Button Content="Palaa päävalikkoon" HorizontalAlignment="Right" VerticalAlignment="Top" Height="61" Width="172" Click="PoistuPäävalikkoon_Click" Margin="0,10,10,0" Grid.RowSpan="2"/>
     </Grid>
 </Window>
