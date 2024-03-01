@@ -1,0 +1,40 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumap\u00E4iv\u00E4kirjakonsoli\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B8743054-1027-41CA-9272-594F0F6FC1CE}|Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampumap\u00E4iv\u00E4kirjakonsoli.csproj|c:\\users\\eve\\documents\\hamk\\ohjelmistoprojekti\\ampuminenr1\\ampumap\u00E4iv\u00E4kirjakonsoli\\ampumap\u00E4iv\u00E4kirjakonsoli\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B8743054-1027-41CA-9272-594F0F6FC1CE}|Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampumap\u00E4iv\u00E4kirjakonsoli.csproj|solutionrelative:ampumap\u00E4iv\u00E4kirjakonsoli\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampumap\u00E4iv\u00E4kirjakonsoli\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Ampumap\u00E4iv\u00E4kirjakonsoli\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumap\u00E4iv\u00E4kirjakonsoli\\Ampumap\u00E4iv\u00E4kirjakonsoli\\MainWindow.xaml",
+              "RelativeToolTip": "Ampumap\u00E4iv\u00E4kirjakonsoli\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-01T13:57:30.225Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
