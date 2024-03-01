@@ -62,8 +62,8 @@
         </DataGrid>
 
         <!-- Napit ja tekstilaatikko tulosten näyttämiseen ja ohjelman sulkemiseen -->
-        <TextBox x:Name="txtNykyinenAika"  MaxHeight="60" Margin="185,5,0,0" Grid.Row="0" Background="#FF7A8270" HorizontalAlignment="Left" Width="173"  TextAlignment="Center" VerticalContentAlignment="Center"/>
-        <Button Content="Aloita tulosten kirjaaminen"  MaxHeight="60" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Height="70" Width="173" Background="#FF7A8270" Click="AloitaKirjaaminen_Click" Grid.Row="0"/>
+        <TextBox x:Name="Päivämäärä"  MaxHeight="60" Margin="185,5,0,0" Grid.Row="0" Background="#FF7A8270" HorizontalAlignment="Left" Width="173"  TextAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap"/>
+        <Button Content="Aloita tulosten kirjaaminen" MaxHeight="60" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top" Height="70" Width="173" Background="#FF7A8270" Click="AloitaKirjaaminen_Click" Grid.Row="0"/>
         <Button Content="Tallenna"  MaxHeight="60" Width="170" HorizontalAlignment="Left" Margin="5,20,0,94" Click="TallennaTiedot_Click" Background="#FFC3C1C1" Grid.Row="1" Grid.RowSpan="2"/>
         <Button Content="Palaa päävalikkoon"  MaxHeight="60" Width="170" Click="PoistuPäävalikkoon_Click" Margin="0,5,10,9" Background="#FFC3C1C1" HorizontalAlignment="Right"/>
         <Button Content="Keskeytä kirjaus" MaxHeight="60" Height="60" Width="170" Background="#FFC3C1C1" Margin="185,20,0,94" Click="KeskeytaKirjaus_Click" Grid.Row="2" HorizontalAlignment="Left"/>
