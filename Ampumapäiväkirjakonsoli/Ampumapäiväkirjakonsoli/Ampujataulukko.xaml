@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Ampumapäiväkirjakonsoli"
         mc:Ignorable="d"
         Title="Ampujataulukko" Height="900" Width="1100" MinWidth="950" MinHeight="750">
-    <Grid Height="884" VerticalAlignment="Top">
+    <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/camo.jpg" Opacity="0.5" Stretch="None"/>
         </Grid.Background>
