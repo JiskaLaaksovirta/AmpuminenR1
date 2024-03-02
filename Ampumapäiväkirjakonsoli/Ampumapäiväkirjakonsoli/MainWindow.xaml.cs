@@ -24,7 +24,7 @@ namespace Ampumapäiväkirjakonsoli
             }
             void timer_Tick(object sender, EventArgs e)
             {
-                Päivämäärä.Text = DateTime.Now.ToString("HH:mm - dddd, MMMM dd, yyyy");
+                Päivämäärä.Text = DateTime.Now.ToString("HH:mm - dddd,\ndd MMMM, yyyy");
             }
         }
 

@@ -5,39 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ampumapäiväkirjakonsoli"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="1100">
+        Title="MainWindow" Height="900" Width="1100" MinWidth="900" MinHeight="500"> 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/camo.jpg" Stretch="UniformToFill" Opacity="0.7"/>
+            <ImageBrush ImageSource="/camo.jpg" Stretch="None" Opacity="0.5"/>
         </Grid.Background>
         <StackPanel Orientation="Horizontal" Margin="0,55,0,0" Height="90" VerticalAlignment="Top" HorizontalAlignment="Center">
             <StackPanel.BindingGroup>
                 <BindingGroup/>
             </StackPanel.BindingGroup>
-            <Button Content="Tulosten kirjaaminen" Height="70" Width="180" Background="#FF7A8270" Click="AloitaKirjaaminen_Click" BorderBrush="Black" Margin="10,0,0,0">
+            <Button Content="Tulosten kirjaaminen" Height="70" Width="180" Background="#FFAEB5A2" Click="AloitaKirjaaminen_Click" BorderBrush="Black" Margin="10,0,0,0" FontFamily="Global Sans Serif" FontSize="14">
                 <Button.BindingGroup>
                     <BindingGroup/>
                 </Button.BindingGroup>
             </Button>
-            <Button Content="Näytä tulokset" Width="180" Height="70" Background="#FF7A8270" Margin="30,10,30,10" Click="NäytäTulokset_Click" BorderBrush="Black">
+            <Button Content="Näytä tulokset" Width="180" Height="70" Background="#FFAEB5A2" Margin="30,10,30,10" Click="NäytäTulokset_Click" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14">
                 <Button.BindingGroup>
                     <BindingGroup/>
                 </Button.BindingGroup>
             </Button>
-            <TextBox x:Name="Päivämäärä" Width="180" Grid.Row="0" Margin="0,10,30,10" Background="#FF7A8270"
-         TextAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" BorderBrush="Black">
+            <TextBox x:Name="Päivämäärä" Width="180" Grid.Row="0" Margin="0,10,30,10" Background="#FFAEB5A2"
+         TextAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" BorderBrush="Black" SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" FontSize="14" IsReadOnly="True">
                 <TextBox.BindingGroup>
                     <BindingGroup/>
                 </TextBox.BindingGroup>
             </TextBox>
-            <Button Content="Sulje ohjelma" Height="70" Width="180" Click="SuljeOhjelma_Click" Background="#FFC3C1C1" BorderBrush="Black">
+            <Button Content="Sulje ohjelma" Height="70" Width="180" Click="SuljeOhjelma_Click" Background="#FFF7F8FA" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14">
                 <Button.BindingGroup>
                     <BindingGroup/>
                 </Button.BindingGroup>
             </Button>
         </StackPanel>
-        <RichTextBox Background="#FF7A8270" BorderBrush="Black"
-             HorizontalAlignment="Center" Width="844" VerticalAlignment="Top" IsReadOnly="True" Height="auto" Margin="0,150,0,0" Padding="0,10,0,10">
+        <RichTextBox Background="#FFAEB5A2" BorderBrush="Black"
+             HorizontalAlignment="Center" Width="844" VerticalAlignment="Top" IsReadOnly="True" Height="auto" Margin="0,150,0,0" Padding="0,10,0,10" SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" FontSize="14">
             <FlowDocument PagePadding="0" TextAlignment="Center">
                 <Paragraph>
                     <Run FontWeight="Bold" Text="Tervetuloa käyttämään ampumapäiväkirjaa"/>
@@ -51,6 +51,6 @@
             </FlowDocument>
         </RichTextBox>
 
-
+       
     </Grid>
 </Window>
