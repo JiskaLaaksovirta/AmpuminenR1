@@ -31,6 +31,7 @@ namespace Ampumapäiväkirjakonsoli
         private void AloitaKirjaaminen_Click(object sender, RoutedEventArgs e)
         {
             LisääRivejäDataGridiin();
+            txtOhje.Clear();
         }
         private void PoistuPäävalikkoon_Click(object sender, RoutedEventArgs e)
         {
@@ -126,5 +127,19 @@ namespace Ampumapäiväkirjakonsoli
 
         }
 
+        private void txtAmpumaradanPituus_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtOhje.Text = "Ohje: Syötä ampumaradan pituus metreinä.";
+        }
+
+        private void txtAmpujienMäärä_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtOhje.Text = "Ohje: Syötä ampujien määrä lukuina.";
+        }
+
+        private void txtKuvaus_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtOhje.Text = "Ohje: Tallenna tarvittaessa lisätietoja kierroksesta. Kuvaus tallentuu jokaiselle ampujalle. Max. 300 merkkiä.";
+        }
     }
 }
