@@ -13,3 +13,4 @@ class Ampuja(string etunimi, string sukunimi,
     public double Kokonaistulos { get; } = kokonaistulos;
     public string AmmunnanKuvaus { get; } = ammunnankuvaus;
 }
+}

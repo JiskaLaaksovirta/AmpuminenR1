@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj": {}
+    "C:\\Users\\lahde\\OneDrive\\Tiedostot\\Gitit\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj": {}
   },
   "projects": {
-    "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj": {
+    "C:\\Users\\lahde\\OneDrive\\Tiedostot\\Gitit\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj",
+        "projectUniqueName": "C:\\Users\\lahde\\OneDrive\\Tiedostot\\Gitit\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj",
         "projectName": "Ampumapäiväkirjakonsoli",
-        "projectPath": "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj",
-        "packagesPath": "C:\\Users\\jiska\\.nuget\\packages\\",
-        "outputPath": "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\obj\\",
+        "projectPath": "C:\\Users\\lahde\\OneDrive\\Tiedostot\\Gitit\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj",
+        "packagesPath": "C:\\Users\\lahde\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lahde\\OneDrive\\Tiedostot\\Gitit\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jiska\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lahde\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
