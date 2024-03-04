@@ -81,7 +81,7 @@
         <Button Content="Tallenna"  MaxHeight="60" Width="170" HorizontalAlignment="Left" Margin="5,15,0,99" Click="TallennaTiedot_Click" Background="#FFF7F8FA" Grid.Row="1" Grid.RowSpan="2" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14"/>
         <Button Content="Palaa päävalikkoon"  MaxHeight="60" Width="170" Click="PoistuPäävalikkoon_Click" Margin="0,10,10,4" Background="#FFF7F8FA" HorizontalAlignment="Right" FontFamily="Global Sans Serif" FontSize="14" Height="60"/>
         <Button Content="Keskeytä kirjaus" MaxHeight="60" Height="60" Width="170" Background="#FFF7F8FA" Margin="188,15,0,99" Click="KeskeytaKirjaus_Click" Grid.Row="2" HorizontalAlignment="Left" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14"/>
-        <TextBox x:Name="txtOhje" MaxHeight="60" Height="60" HorizontalAlignment="Left" Margin="395,16,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Ohje: Aloita syöttämällä ampumaradan pituus." VerticalAlignment="Top" Width="350" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14"/>
+        <TextBox x:Name="txtOhje" MaxHeight="60" Height="60" TextAlignment="Center" HorizontalAlignment="Left" Margin="395,16,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Ohje: Aloita syöttämällä ampumaradan pituus sekä ampujien määrä." VerticalAlignment="Top" Width="350" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14"/>
 
 
     </Grid>

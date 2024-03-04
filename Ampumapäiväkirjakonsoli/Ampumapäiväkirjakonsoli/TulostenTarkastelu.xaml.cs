@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace Ampumapäiväkirjakonsoli
 {
@@ -51,6 +52,24 @@ namespace Ampumapäiväkirjakonsoli
             }
         }
 
+        private void TulostaAmpumatiedot_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+            if (printDialog.ShowDialog() == true)
+            {
+                // Aseta DataGridin kokoonpano tulostusta varten
+                dgAmmunnat.LayoutTransform = new ScaleTransform(1, 1);
+                Size pageSize = new Size(printDialog.PrintableAreaWidth, printDialog.PrintableAreaHeight);
+                dgAmmunnat.Measure(pageSize);
+                dgAmmunnat.Arrange(new Rect(5, 5, pageSize.Width, pageSize.Height));
+
+                // Tulosta DataGrid
+                printDialog.PrintVisual(dgAmmunnat, "Ampumatiedot");
+
+                // Palauta DataGridin alkuperäinen kokoonpano
+                dgAmmunnat.LayoutTransform = null;
+            }
+        }
 
         private void PoistuPäävalikkoon_Click(object sender, RoutedEventArgs e)
         {

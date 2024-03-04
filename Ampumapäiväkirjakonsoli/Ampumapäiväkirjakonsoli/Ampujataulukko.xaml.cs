@@ -94,7 +94,7 @@ namespace Ampumapäiväkirjakonsoli
                     }
                     else
                     {
-                        MessageBox.Show("Kaikki pakollisia tietoja ei ole täytetty tai laukaustenmäärä on 0. Tarkista tiedot!");
+                        MessageBox.Show("Kaikkia pakollisia tietoja ei ole täytetty tai laukaustenmäärä on 0. Tarkista tiedot!");
                         tallennusOnnistui = false;
                         break;
                     }
