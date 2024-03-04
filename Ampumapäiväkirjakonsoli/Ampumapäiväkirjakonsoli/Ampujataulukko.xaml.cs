@@ -73,7 +73,7 @@ namespace Ampumapäiväkirjakonsoli
                 {   // Tarkistetaan, että tiedot on syötetty datagridin kenttiin.
                     if (!string.IsNullOrWhiteSpace(ampujaDataGridista.Etunimi) &&
                         !string.IsNullOrWhiteSpace(ampujaDataGridista.Sukunimi) &&
-                        ampujaDataGridista.LaukaustenMäärä > 0 &&
+                        ampujaDataGridista.LaukaustenMäärä >= 0 &&
                         ampujaDataGridista.Kokonaistulos >= 0) // Estetään miinustulokset
 
                     {
