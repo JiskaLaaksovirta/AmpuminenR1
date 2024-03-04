@@ -31,7 +31,7 @@ namespace Ampumapäiväkirjakonsoli
         private void AloitaKirjaaminen_Click(object sender, RoutedEventArgs e)
         {
             LisääRivejäDataGridiin();
-            txtOhje.Clear();
+            txtOhje.Text = "Ohje: Syötä kierroksen tiedot. Paina Tallenna tallentaaksesi tiedot tai Keskeytä kirjaus aloittaaksesi alusta.";
         }
         private void PoistuPäävalikkoon_Click(object sender, RoutedEventArgs e)
         {
@@ -115,6 +115,7 @@ namespace Ampumapäiväkirjakonsoli
             txtAmpujienMäärä.Text = string.Empty;
             txtKuvaus.Text = string.Empty;
             dataGrid.Items.Clear();
+            txtOhje.Text = "Ohje: Aloita syöttämällä ampumaradan pituus sekä ampujien määrä.";
         }
 
         private void KeskeytaKirjaus_Click(object sender, RoutedEventArgs e)
@@ -124,7 +125,7 @@ namespace Ampumapäiväkirjakonsoli
             txtAmpujienMäärä.Clear();
             txtKuvaus.Clear();
             dataGrid.Items.Clear();
-
+            txtOhje.Text = "Ohje: Aloita syöttämällä ampumaradan pituus sekä ampujien määrä.";
         }
 
         private void txtAmpumaradanPituus_GotFocus(object sender, RoutedEventArgs e)
@@ -140,6 +141,12 @@ namespace Ampumapäiväkirjakonsoli
         private void txtKuvaus_GotFocus(object sender, RoutedEventArgs e)
         {
             txtOhje.Text = "Ohje: Tallenna tarvittaessa lisätietoja kierroksesta. Kuvaus tallentuu jokaiselle ampujalle. Max. 300 merkkiä.";
+        }
+        private void txtKuvaus_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            // Päivitä merkkimäärä laskurin teksti
+            int merkkimaara = txtKuvaus.Text.Length;
+            Laskuri.Content = $"{merkkimaara} / 300";
         }
     }
 }

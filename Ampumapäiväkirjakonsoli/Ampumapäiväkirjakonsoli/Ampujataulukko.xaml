@@ -25,9 +25,9 @@
 
 
 
-        <Label Content="Kuvaus ammunnasta (valinnainen):" Grid.Row="2" Margin="5,243,0,-282" Background="#FFF7F8FA" HorizontalAlignment="Left" Width="353" MaxHeight="200" BorderBrush="Black" BorderThickness="1" Foreground="Black" FontFamily="Global Sans Serif" FontSize="14" />
-        <TextBox x:Name="txtKuvaus" Grid.Row="2" Margin="18,303,0,-260" AcceptsTab="True" MaxHeight="150"
-         TextWrapping="Wrap" AcceptsReturn="True" Height="Auto" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Width="327" MaxLength="300" BorderBrush="#FF4E5056" SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" GotFocus="txtKuvaus_GotFocus"/>
+        <Label x:Name="Kuvaus" Content="Kuvaus ammunnasta (valinnainen):" Grid.Row="2" Margin="5,243,0,-282" Background="#FFF7F8FA" HorizontalAlignment="Left" Width="353" MaxHeight="250" BorderBrush="Black" BorderThickness="1" Foreground="Black" FontFamily="Global Sans Serif" FontSize="14" />
+        <TextBox x:Name="txtKuvaus" Grid.Row="2" Margin="18,303,0,-260" AcceptsTab="True" MaxHeight="150" TextWrapping="Wrap" AcceptsReturn="True" Height="Auto" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Width="327" MaxLength="300" BorderBrush="#FF4E5056" SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" GotFocus="txtKuvaus_GotFocus" TextChanged="txtKuvaus_TextChanged" />
+        <Label x:Name="Laskuri" Content="0 / 300" Grid.Row="2" Margin="280,243,0,-475" Background="#FFF7F8FA" HorizontalAlignment="Left" Width="75" MaxHeight="20" FontFamily="Global Sans Serif" FontSize="10" HorizontalContentAlignment="Right" />
 
         <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Margin="380,119,49,-426" Background="#FFAEB5A2" Grid.Row="2" IsTabStop="True" BorderBrush="Black" RowHeight="30" Width="auto" MaxWidth="950"
                   Height="Auto" MaxHeight="600" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" FontFamily="Global Sans Serif" FontSize="14" AutomationProperties.IsOffscreenBehavior="Offscreen" VerticalGridLinesBrush="Black" SelectionMode="Single" SelectionUnit="Cell">
@@ -81,7 +81,7 @@
         <Button Content="Tallenna"  MaxHeight="60" Width="170" HorizontalAlignment="Left" Margin="5,15,0,99" Click="TallennaTiedot_Click" Background="#FFF7F8FA" Grid.Row="1" Grid.RowSpan="2" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14"/>
         <Button Content="Palaa päävalikkoon"  MaxHeight="60" Width="170" Click="PoistuPäävalikkoon_Click" Margin="0,10,10,4" Background="#FFF7F8FA" HorizontalAlignment="Right" FontFamily="Global Sans Serif" FontSize="14" Height="60"/>
         <Button Content="Keskeytä kirjaus" MaxHeight="60" Height="60" Width="170" Background="#FFF7F8FA" Margin="188,15,0,99" Click="KeskeytaKirjaus_Click" Grid.Row="2" HorizontalAlignment="Left" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14"/>
-        <TextBox x:Name="txtOhje" MaxHeight="60" Height="60" TextAlignment="Center" HorizontalAlignment="Left" Margin="395,16,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Ohje: Aloita syöttämällä ampumaradan pituus sekä ampujien määrä." VerticalAlignment="Top" Width="350" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14"/>
+        <TextBox x:Name="txtOhje" MaxHeight="60" Height="60" TextAlignment="Center" HorizontalAlignment="Left" Margin="380,16,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Ohje: Aloita syöttämällä ampumaradan pituus sekä ampujien määrä." VerticalAlignment="Top" Width="336" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14"/>
 
 
     </Grid>
