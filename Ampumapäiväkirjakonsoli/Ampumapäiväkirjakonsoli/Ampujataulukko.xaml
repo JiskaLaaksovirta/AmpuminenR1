@@ -5,19 +5,84 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ampumapäiväkirjakonsoli"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1500" Width="1500">
+        Title="Ampujataulukko" Height="900" Width="1100" MinWidth="950" MinHeight="750">
     <Grid>
-        
-        <Grid>
-            <TextBox x:Name="txtAmpumaradanPituus" HorizontalAlignment="Left" Margin="42,333,0,0" TextWrapping="Wrap" Text="Ampumaradan pituus(m):" VerticalAlignment="Top" Width="247" Height="95"/>
-            <TextBox x:Name="txtLaukaustenMäärä" HorizontalAlignment="Left" Margin="42,444,0,0" TextWrapping="Wrap" Text="Laukausten määrä:" VerticalAlignment="Top" Width="247" Height="95"/>
-            <TextBox x:Name="txtAmpujienMäärä" HorizontalAlignment="Left" Margin="42,553,0,0" TextWrapping="Wrap" Text="Ampujien määrä:" VerticalAlignment="Top" Width="247" Height="95"/>
-            <TextBox x:Name="txtKierrostenMäärä" HorizontalAlignment="Left" Margin="42,663,0,0" TextWrapping="Wrap" Text="Kierrosten määrä:" VerticalAlignment="Top" Width="247" Height="95"/>
-            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="1246" Height="853" Background="#78866B" Margin="217,0,0,0"/>
-            <Button Content="Aloita tulosten kirjaaminen" HorizontalAlignment="Left" Margin="289,18,0,0" VerticalAlignment="Top" Height="60" Width="127" Background="#78866B" Click="AloitaKirjaaminen_Click"/>
-            <Button Content="Näytä tulokset" HorizontalAlignment="Left" Margin="566,18,0,0" VerticalAlignment="Top" Width="127" Height="60" Background="#78866B" Click="NäytäTulokset_Click"/>
-            <TextBox HorizontalAlignment="Left" Margin="1283,23,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="143" Height="60" Background="#78866B"/>
-            <Button Content="Sulje ohjelma" HorizontalAlignment="Left" Margin="1049,23,0,0" VerticalAlignment="Top" Height="60" Width="131" Click="SuljeOhjelma_Click"/>
-        </Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/camo.jpg" Opacity="0.5" Stretch="None"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="111.96"/>
+        </Grid.RowDefinitions>
+
+        <!-- Ampumapäiväkirjan tietojen syöttö -->
+        <Label Content="Ampumaradan pituus (m):" Margin="5,114,0,2" Grid.Row="2" Background="#FFF7F8FA" HorizontalAlignment="Left" Width="353" MaxHeight="50" BorderBrush="Black" BorderThickness="1" FontFamily="Global Sans Serif" FontSize="14" />
+        <TextBox x:Name="txtAmpumaradanPituus"  Margin="188,123,0,17" Grid.Row="2" HorizontalAlignment="Left" Width="157" MaxLength="4" MaxHeight="34" BorderBrush="#FF4E5056" SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" MaxWidth="157" MinWidth="157" MinHeight="36" GotFocus="txtAmpumaradanPituus_GotFocus"/>
+
+        <Label Content="Ampujien määrä:"  Margin="5,178,0,-58" Grid.Row="2" Background="#FFF7F8FA" HorizontalAlignment="Left" Width="353" MaxHeight="50" BorderBrush="Black" BorderThickness="1" FontFamily="Global Sans Serif" FontSize="14"/>
+        <TextBox x:Name="txtAmpujienMäärä"  Margin="188,184,0,-44" Grid.Row="2" HorizontalAlignment="Left" Width="157" MaxLength="2" MaxHeight="34" BorderBrush="#FF4E5056" SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" MaxWidth="157" MinWidth="157" MinHeight="34" GotFocus="txtAmpujienMäärä_GotFocus"/>
+
+
+
+        <Label Content="Kuvaus ammunnasta (valinnainen):" Grid.Row="2" Margin="5,243,0,-282" Background="#FFF7F8FA" HorizontalAlignment="Left" Width="353" MaxHeight="200" BorderBrush="Black" BorderThickness="1" Foreground="Black" FontFamily="Global Sans Serif" FontSize="14" />
+        <TextBox x:Name="txtKuvaus" Grid.Row="2" Margin="18,303,0,-260" AcceptsTab="True" MaxHeight="150"
+         TextWrapping="Wrap" AcceptsReturn="True" Height="Auto" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" Width="327" MaxLength="300" BorderBrush="#FF4E5056" SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" GotFocus="txtKuvaus_GotFocus"/>
+
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Margin="380,119,49,-426" Background="#FFAEB5A2" Grid.Row="2" IsTabStop="True" BorderBrush="Black" RowHeight="30" Width="auto" MaxWidth="950"
+                  Height="Auto" MaxHeight="600" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" FontFamily="Global Sans Serif" FontSize="14" AutomationProperties.IsOffscreenBehavior="Offscreen" VerticalGridLinesBrush="Black" SelectionMode="Single" SelectionUnit="Cell">
+            <DataGrid.RowHeaderStyle>
+                <Style/>
+            </DataGrid.RowHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Etunimi" Width="25*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Etunimi, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Sukunimi" Width="25*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Sukunimi, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Laukaukset" Width="25*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Laukaukset, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Kokonaistulos" Width="25*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Kokonaistulos, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Napit ja tekstilaatikko tulosten näyttämiseen ja ohjelman sulkemiseen -->
+        <TextBox x:Name="Päivämäärä"  MaxHeight="60" Margin="188,6,0,0" Grid.Row="0" Background="#FFAEB5A2" HorizontalAlignment="Left" Width="170"  TextAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" BorderBrush="Black" RenderTransformOrigin="0.5,0.5" SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" FontSize="14" IsReadOnly="True">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.218"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.33"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button Content="Aloita tulosten kirjaaminen" MaxHeight="60" HorizontalAlignment="Left" VerticalAlignment="Top" Height="60" Width="170" Background="#FFAEB5A2" Click="AloitaKirjaaminen_Click" Grid.Row="0" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14" Margin="5,10,0,0"/>
+        <Button Content="Tallenna"  MaxHeight="60" Width="170" HorizontalAlignment="Left" Margin="5,15,0,99" Click="TallennaTiedot_Click" Background="#FFF7F8FA" Grid.Row="1" Grid.RowSpan="2" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14"/>
+        <Button Content="Palaa päävalikkoon"  MaxHeight="60" Width="170" Click="PoistuPäävalikkoon_Click" Margin="0,10,10,4" Background="#FFF7F8FA" HorizontalAlignment="Right" FontFamily="Global Sans Serif" FontSize="14" Height="60"/>
+        <Button Content="Keskeytä kirjaus" MaxHeight="60" Height="60" Width="170" Background="#FFF7F8FA" Margin="188,15,0,99" Click="KeskeytaKirjaus_Click" Grid.Row="2" HorizontalAlignment="Left" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14"/>
+        <TextBox x:Name="txtOhje" MaxHeight="60" Height="60" HorizontalAlignment="Left" Margin="395,16,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Ohje: Aloita syöttämällä ampumaradan pituus." VerticalAlignment="Top" Width="350" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14"/>
+
+
     </Grid>
 </Window>

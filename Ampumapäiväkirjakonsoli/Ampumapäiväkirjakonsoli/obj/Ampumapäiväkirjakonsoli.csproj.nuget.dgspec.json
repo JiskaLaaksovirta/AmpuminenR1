@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\lahde\\OneDrive\\Tiedostot\\Gitit\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj": {}
   },
   "projects": {
@@ -12,13 +13,30 @@
         "projectPath": "C:\\Users\\lahde\\OneDrive\\Tiedostot\\Gitit\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj",
         "packagesPath": "C:\\Users\\lahde\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\lahde\\OneDrive\\Tiedostot\\Gitit\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\obj\\",
+=======
+    "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj",
+        "projectName": "Ampumapäiväkirjakonsoli",
+        "projectPath": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj",
+        "packagesPath": "C:\\Users\\Eve\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eve\\Documents\\Hamk\\ohjelmistoprojekti\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\obj\\",
+>>>>>>> b54480f394f7f7783b318d2b29a43d69b8efd500
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\lahde\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+=======
+          "C:\\Users\\Eve\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> b54480f394f7f7783b318d2b29a43d69b8efd500
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +57,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -63,7 +86,11 @@
               "privateAssets": "none"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+>>>>>>> b54480f394f7f7783b318d2b29a43d69b8efd500
         }
       }
     }

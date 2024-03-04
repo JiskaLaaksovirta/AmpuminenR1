@@ -8,4 +8,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Kirjaus.cs" />
+    <Compile Remove="Syötteiden varmentaja.cs" />
+    <Compile Remove="TulostenTarkastelu.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="camo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="camo.jpg" />
+  </ItemGroup>
+
 </Project>

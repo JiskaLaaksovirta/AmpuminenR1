@@ -8,6 +8,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Ampumapäiväkirjakonsoli
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\lahde\OneDrive\Tiedostot\Gitit\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\
+=======
+build_property.ProjectDir = C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\
+>>>>>>> b54480f394f7f7783b318d2b29a43d69b8efd500
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -4,31 +4,46 @@ using System.IO;
 using System.Text;
 using System.Text.Json;
 using System.Windows;
+using System.Windows.Threading;
 
 namespace Ampumapäiväkirjakonsoli
 {
     public partial class MainWindow : Window
     {
+
+        List<Ampuja> ampumapäiväkirja = [];
+
         public MainWindow()
         {
-            InitializeComponent();
+            {
+                InitializeComponent();
+                DispatcherTimer LiveTime = new DispatcherTimer();
+                LiveTime.Interval = TimeSpan.FromSeconds(1);
+                LiveTime.Tick += timer_Tick;
+                LiveTime.Start();
+            }
+            void timer_Tick(object sender, EventArgs e)
+            {
+                Päivämäärä.Text = DateTime.Now.ToString("HH:mm - dddd,\ndd MMMM, yyyy");
+            }
         }
-
-        string fileName = "Ampumatulokset.json";
-        List<Ampuja> ampumapäiväkirja = new List<Ampuja>();
 
         private void AloitaKirjaaminen_Click(object sender, RoutedEventArgs e)
         {
-            Arvojenkysyntä arvojenkysyntä = new Arvojenkysyntä();
-            arvojenkysyntä.ShowDialog(); // Avaa uuden ikkunan modaalina
+            Ampujataulukko ampujataulukko = new Ampujataulukko(ampumapäiväkirja, this); // Välitä lista konstruktorille
+            this.Hide();
+            ampujataulukko.Show();
+            
         }
 
         private void NäytäTulokset_Click(object sender, RoutedEventArgs e)
         {
-            string etunimi = InputBox("Syötä ampujan etunimi:");
-            string sukunimi = InputBox("Syötä ampujan sukunimi:");
-            TulostenTarkastelu.HaeTulokset(ampumapäiväkirja, etunimi, sukunimi);
+            TulostenTarkastelu tulostenTarkasteluIkkuna = new TulostenTarkastelu(ampumapäiväkirja, this);
+            this.Hide();
+            tulostenTarkasteluIkkuna.Show();
+            
         }
+
 
         private void SuljeOhjelma_Click(object sender, RoutedEventArgs e)
         {
@@ -41,10 +56,9 @@ namespace Ampumapäiväkirjakonsoli
             return Console.ReadLine();
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void RichTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
-            string jsonString = JsonSerializer.Serialize(ampumapäiväkirja);
-            File.WriteAllText(fileName, jsonString);
+
         }
     }
 }
