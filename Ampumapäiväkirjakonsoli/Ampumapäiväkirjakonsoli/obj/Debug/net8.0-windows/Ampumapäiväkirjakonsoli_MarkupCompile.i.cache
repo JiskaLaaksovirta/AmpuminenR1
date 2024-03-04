@@ -4,12 +4,26 @@
 winexe
 C#
 .cs
-C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\
+<<<<<<< HEAD
+C:\Users\lahde\OneDrive\Tiedostot\Gitit\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\
+=======
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\obj\Debug\net8.0-windows\
+>>>>>>> b54480f394f7f7783b318d2b29a43d69b8efd500
 Ampumapäiväkirjakonsoli
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\App.xaml
+<<<<<<< HEAD
+C:\Users\lahde\OneDrive\Tiedostot\Gitit\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\App.xaml
+3-1439634463
+
+12-607036319
+1981451641563
+Ampujataulukko.xaml;Arvojenkysyntä.xaml;MainWindow.xaml;
+
+False
+=======
+C:\Users\Eve\Documents\Hamk\ohjelmistoprojekti\AmpuminenR1\Ampumapäiväkirjakonsoli\Ampumapäiväkirjakonsoli\App.xaml
 31986471193
 
 9283041378
@@ -17,4 +31,5 @@ C:\Users\inkak\Documents\Ohjelmistokehitys\Inkan gitit\AmpuminenR1\Ampumapäivä
 Ampujataulukko.xaml;MainWindow.xaml;TulostenTarkastelu.xaml;
 
 True
+>>>>>>> b54480f394f7f7783b318d2b29a43d69b8efd500
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ampumapäiväkirja")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1495c6808db59228e1a13f8229c7a962098fb6e6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+141f38750049184cbed69b214aacdb34efef9a59")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ampumapäiväkirja")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ampumapäiväkirja")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

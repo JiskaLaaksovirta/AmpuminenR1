@@ -55,5 +55,10 @@ namespace Ampumapäiväkirjakonsoli
             Console.WriteLine(prompt);
             return Console.ReadLine();
         }
+
+        private void RichTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
+        }
     }
 }
