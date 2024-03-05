@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ampumapäiväkirjakonsoli"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="1100" MinWidth="900" MinHeight="500"> 
+        Title="MainWindow" Height="900" Width="1100" MinWidth="900" MinHeight="500" > 
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/camo.jpg" Stretch="None" Opacity="0.5"/>
