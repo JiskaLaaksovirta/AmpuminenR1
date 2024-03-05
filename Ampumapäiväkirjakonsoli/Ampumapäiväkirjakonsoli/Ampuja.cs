@@ -7,10 +7,10 @@ namespace Ampumapäiväkirjakonsoli
     {
         private string etunimi;
         private string sukunimi;
-        private DateTime päivämäärä;
-        private double ampumaradanPituus;
         private int laukaustenMäärä;
         private double kokonaistulos;
+        private DateTime päivämäärä;
+        private double ampumaradanPituus;
         private string ammunnanKuvaus;
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -22,7 +22,7 @@ namespace Ampumapäiväkirjakonsoli
 
         public string Etunimi
         {
-            get => etunimi;
+            get { return etunimi; }
             set
             {
                 if (etunimi != value)
@@ -35,7 +35,7 @@ namespace Ampumapäiväkirjakonsoli
 
         public string Sukunimi
         {
-            get => sukunimi;
+            get { return sukunimi; }
             set
             {
                 if (sukunimi != value)
@@ -46,35 +46,9 @@ namespace Ampumapäiväkirjakonsoli
             }
         }
 
-        public DateTime Päivämäärä
-        {
-            get => päivämäärä;
-            set
-            {
-                if (päivämäärä != value)
-                {
-                    päivämäärä = value;
-                    OnPropertyChanged(nameof(Päivämäärä));
-                }
-            }
-        }
-
-        public double AmpumaradanPituus
-        {
-            get => ampumaradanPituus;
-            set
-            {
-                if (ampumaradanPituus != value)
-                {
-                    ampumaradanPituus = value;
-                    OnPropertyChanged(nameof(AmpumaradanPituus));
-                }
-            }
-        }
-
         public int LaukaustenMäärä
         {
-            get => laukaustenMäärä;
+            get { return laukaustenMäärä; }
             set
             {
                 if (laukaustenMäärä != value)
@@ -87,7 +61,7 @@ namespace Ampumapäiväkirjakonsoli
 
         public double Kokonaistulos
         {
-            get => kokonaistulos;
+            get { return kokonaistulos; }
             set
             {
                 if (kokonaistulos != value)
@@ -98,9 +72,35 @@ namespace Ampumapäiväkirjakonsoli
             }
         }
 
+        public DateTime Päivämäärä
+        {
+            get { return päivämäärä; }
+            set
+            {
+                if (päivämäärä != value)
+                {
+                    päivämäärä = value;
+                    OnPropertyChanged(nameof(Päivämäärä));
+                }
+            }
+        }
+
+        public double AmpumaradanPituus
+        {
+            get { return ampumaradanPituus; }
+            set
+            {
+                if (ampumaradanPituus != value)
+                {
+                    ampumaradanPituus = value;
+                    OnPropertyChanged(nameof(AmpumaradanPituus));
+                }
+            }
+        }
+
         public string AmmunnanKuvaus
         {
-            get => ammunnanKuvaus;
+            get { return ammunnanKuvaus; }
             set
             {
                 if (ammunnanKuvaus != value)
@@ -110,7 +110,5 @@ namespace Ampumapäiväkirjakonsoli
                 }
             }
         }
-
-        public string KokoNimi => $"{Etunimi} {Sukunimi}";
     }
 }

@@ -52,7 +52,7 @@
                 <DataGridTemplateColumn Header="Laukaukset" Width="25*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBox Text="{Binding Laukaukset, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
+                            <TextBox Text="{Binding Laukau, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

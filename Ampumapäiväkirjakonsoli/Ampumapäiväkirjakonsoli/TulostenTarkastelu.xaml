@@ -20,11 +20,11 @@
           HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
           CanUserAddRows="False" CanUserDeleteRows="False" FontFamily="Global Sans Serif" FontSize="14">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Päivämäärä" Binding="{Binding Päivämäärä}" Width="*" />
-                <DataGridTextColumn Header="Radan pituus" Binding="{Binding AmpumaradanPituus}" Width="*" />
-                <DataGridTextColumn Header="Laukausten määrä" Binding="{Binding LaukaustenMäärä}" Width="*" />
-                <DataGridTextColumn Header="Kokonaistulos" Binding="{Binding Kokonaistulos}" Width="*" />
-                <DataGridTemplateColumn Header="Ammunnan kuvaus" Width="*">
+                <DataGridTextColumn Header="Päivämäärä" Binding="{Binding Päivämäärä}" Width="12*" />
+                <DataGridTextColumn Header="Radan pituus (m)" Binding="{Binding AmpumaradanPituus}" Width="12*" />
+                <DataGridTextColumn Header="Laukausten määrä" Binding="{Binding LaukaustenMäärä}" Width="12*" />
+                <DataGridTextColumn Header="Kokonaistulos" Binding="{Binding Kokonaistulos}" Width="12*" />
+                <DataGridTemplateColumn Header="Ammunnan kuvaus" Width="50*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBox Text="{Binding AmmunnanKuvaus}" TextWrapping="Wrap" IsReadOnly="True" BorderThickness="0" Background="Transparent"/>
