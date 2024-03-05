@@ -147,6 +147,23 @@ namespace Ampumapäiväkirjakonsoli
             // Päivitä merkkimäärä laskurin teksti
             int merkkimaara = txtKuvaus.Text.Length;
             Laskuri.Content = $"{merkkimaara} / 300";
+     
+        }
+        private void VihreäThemeClick(object sender, RoutedEventArgs e)
+        {
+            OhjelmaTeema.ChangeTheme(new Uri("Teemat/vihreä.xaml", UriKind.Relative));
+        }
+        private void SininenThemeClick(object sender, RoutedEventArgs e)
+        {
+            OhjelmaTeema.ChangeTheme(new Uri("Teemat/sininen.xaml", UriKind.Relative));
+        }
+        private void VaaleanpunainenThemeClick(object sender, RoutedEventArgs e)
+        {
+            OhjelmaTeema.ChangeTheme(new Uri("Teemat/vaaleanpunainen.xaml", UriKind.Relative));
+        }
+        private void PelkistettyThemeClick(object sender, RoutedEventArgs e)
+        {
+            OhjelmaTeema.ChangeTheme(new Uri("Teemat/pelkistetty.xaml", UriKind.Relative));
         }
     }
 }

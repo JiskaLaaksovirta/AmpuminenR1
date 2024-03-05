@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ImageBrush ImageSource="/camo-B.jpg" Stretch="UniformToFill" Opacity="0.7" x:Key="Backdrop"/>
+    <SolidColorBrush Color="#D3E3FF" x:Key="Tulosten kirjaaminen"/>
+    <SolidColorBrush Color="#D3E3FF" x:Key="Näytä tulokset"/>
+    <SolidColorBrush Color="#D3E3FF" x:Key="Päivämäärä"/>
+    <SolidColorBrush Color="#FFF7F8FA" x:Key="Sulje ohjelma"/>
+    <SolidColorBrush Color="#D3E3FF" x:Key="Ohje"/>
+
+    <SolidColorBrush Color="#D3E3FF" x:Key="Aloita tulosten kirjaaminen"/>
+    <SolidColorBrush Color="#D3E3FF" x:Key="Päivämäärä2"/>
+    <SolidColorBrush Color="#D3E3FF" x:Key="dataGrid"/>
+
+</ResourceDictionary>

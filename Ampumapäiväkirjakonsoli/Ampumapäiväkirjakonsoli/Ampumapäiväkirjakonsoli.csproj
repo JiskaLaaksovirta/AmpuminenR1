@@ -15,10 +15,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="camo-B.jpg" />
+    <None Remove="camo-P.jpg" />
     <None Remove="camo.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="camo-B.jpg" />
+    <Resource Include="camo-P.jpg" />
     <Resource Include="camo.jpg" />
   </ItemGroup>
 

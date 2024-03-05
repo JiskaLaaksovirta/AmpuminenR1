@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush Color="#606060" x:Key="Backdrop"/>
+    <SolidColorBrush Color="#Bfbfbf" x:Key="Tulosten kirjaaminen"/>
+    <SolidColorBrush Color="#Bfbfbf" x:Key="Näytä tulokset"/>
+    <SolidColorBrush Color="#Bfbfbf" x:Key="Päivämäärä"/>
+    <SolidColorBrush Color="#FFF7F8FA" x:Key="Sulje ohjelma"/>
+    <SolidColorBrush Color="#Bfbfbf" x:Key="Ohje"/>
+
+    <SolidColorBrush Color="#Bfbfbf" x:Key="Aloita tulosten kirjaaminen"/>
+    <SolidColorBrush Color="#Bfbfbf" x:Key="Päivämäärä2"/>
+    <SolidColorBrush Color="#Bfbfbf" x:Key="dataGrid"/>
+    
+</ResourceDictionary>

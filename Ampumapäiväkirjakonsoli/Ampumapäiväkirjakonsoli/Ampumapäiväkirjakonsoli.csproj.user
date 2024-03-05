@@ -21,6 +21,18 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Teemat\pelkistetty.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Teemat\sininen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Teemat\vaaleanpunainen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Teemat\vihreä.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="TulostenTarkastelu.xaml">
       <SubType>Designer</SubType>
     </Page>

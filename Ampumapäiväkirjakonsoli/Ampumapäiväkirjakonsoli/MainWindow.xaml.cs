@@ -56,9 +56,21 @@ namespace Ampumapäiväkirjakonsoli
             return Console.ReadLine();
         }
 
-        private void RichTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        private void VihreäThemeClick(object sender, RoutedEventArgs e)
         {
-
+            OhjelmaTeema.ChangeTheme(new Uri("Teemat/vihreä.xaml",UriKind.Relative));
+        }
+        private void SininenThemeClick(object sender, RoutedEventArgs e)
+        {
+            OhjelmaTeema.ChangeTheme(new Uri("Teemat/sininen.xaml", UriKind.Relative));
+        }
+        private void VaaleanpunainenThemeClick(object sender, RoutedEventArgs e)
+        {
+            OhjelmaTeema.ChangeTheme(new Uri("Teemat/vaaleanpunainen.xaml", UriKind.Relative));
+        }
+        private void PelkistettyThemeClick(object sender, RoutedEventArgs e)
+        {
+            OhjelmaTeema.ChangeTheme(new Uri("Teemat/pelkistetty.xaml", UriKind.Relative));
         }
     }
 }
