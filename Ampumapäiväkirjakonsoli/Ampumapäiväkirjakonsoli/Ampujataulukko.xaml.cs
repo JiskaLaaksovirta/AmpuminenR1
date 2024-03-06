@@ -2,6 +2,8 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
+using System.IO;
+using System.Text.Json;
 
 namespace Ampumapäiväkirjakonsoli
 {
@@ -55,6 +57,20 @@ namespace Ampumapäiväkirjakonsoli
             }
         }
 
+        private void SaveToJson()
+        {
+            try
+            {
+                string fileName = "Ampumatulokset.json";
+                string jsonString = JsonSerializer.Serialize(ampumapäiväkirja);
+                File.WriteAllText(fileName, jsonString);
+                //MessageBox.Show("Tallennettu onnistuneesti.");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Virhe tallennuksessa");
+            }
+        }
 
         private void TallennaTiedot_Click(object sender, RoutedEventArgs e)
         {
@@ -103,6 +119,7 @@ namespace Ampumapäiväkirjakonsoli
             
             if (tallennusOnnistui)
             {
+                SaveToJson();
                 MessageBox.Show("Ammunnan tiedot tallennettu!");
                 TyhjennäKentät(); // Tyhjennä kentät tallennuksen jälkeen
             }       

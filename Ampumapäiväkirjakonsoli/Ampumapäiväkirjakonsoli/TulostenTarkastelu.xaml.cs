@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.IO;
 
 namespace Ampumapäiväkirjakonsoli
 {
@@ -12,11 +15,17 @@ namespace Ampumapäiväkirjakonsoli
 
         private MainWindow mainWindow;
 
+
         public TulostenTarkastelu(List<Ampuja> ampumapäiväkirja, MainWindow mainWindow)
         {
             InitializeComponent();
             this.ampumapäiväkirja = ampumapäiväkirja;
             this.mainWindow = mainWindow;
+
+            if (ampumapäiväkirja.Count == 0)
+            {
+                MergeJsonData();
+            }
 
             // Suodatetaan nimet
             var uniikitNimet = ampumapäiväkirja
@@ -31,6 +40,17 @@ namespace Ampumapäiväkirjakonsoli
             }
         }
 
+        private void MergeJsonData()
+        {
+            string fileName = "Ampumatulokset.json";
+            if (File.Exists(fileName))
+            {
+                string previousJson = File.ReadAllText(fileName);
+                List<Ampuja> previousData = JsonSerializer.Deserialize<List<Ampuja>>(previousJson);
+
+                ampumapäiväkirja.AddRange(previousData);
+            }
+        }
         private void cmbAmpujat_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
