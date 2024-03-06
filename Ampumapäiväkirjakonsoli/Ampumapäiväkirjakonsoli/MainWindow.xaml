@@ -56,6 +56,9 @@
                 <Paragraph>
                     <Run Text="Tulosten tarkasteluun valitse: ”Näytä tulokset”."/>
                 </Paragraph>
+                <Paragraph>
+                    <Run Text="Vaida sovelluksen teema oikealla klikkauksella!"/>
+                </Paragraph>
             </FlowDocument>
         </RichTextBox>
 

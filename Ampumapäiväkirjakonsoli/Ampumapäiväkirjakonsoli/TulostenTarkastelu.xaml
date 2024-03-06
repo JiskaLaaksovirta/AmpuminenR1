@@ -41,6 +41,7 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+        
         <Button Content="Palaa päävalikkoon" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="61" Width="172" Click="PoistuPäävalikkoon_Click" Margin="0,20,10,0" FontFamily="Global Sans Serif" FontSize="14" Background="White"/>
         <Button Content="Tulosta ampumatiedot"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="61" Width="172" Click="TulostaAmpumatiedot_Click" Margin="10,20,0,0" Grid.Row="0" FontFamily="Global Sans Serif" FontSize="14"/>
 
