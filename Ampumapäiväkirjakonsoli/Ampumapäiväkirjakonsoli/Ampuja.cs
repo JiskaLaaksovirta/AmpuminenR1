@@ -5,6 +5,7 @@ namespace Ampumapäiväkirjakonsoli
 {
     public class Ampuja : INotifyPropertyChanged
     {
+        private bool OnChekattu;
         private string etunimi;
         private string sukunimi;
         private int laukaustenMäärä;
@@ -29,6 +30,18 @@ namespace Ampumapäiväkirjakonsoli
                 {
                     etunimi = value;
                     OnPropertyChanged(nameof(Etunimi));
+                }
+            }
+        }
+        public bool onChekattu
+        {
+            get { return OnChekattu; }
+            set
+            {
+                if (OnChekattu != value)
+                {
+                    OnChekattu = value;
+                    OnPropertyChanged(nameof(onChekattu));
                 }
             }
         }

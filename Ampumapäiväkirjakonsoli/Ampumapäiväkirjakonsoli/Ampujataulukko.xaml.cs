@@ -57,21 +57,6 @@ namespace Ampumapäiväkirjakonsoli
             }
         }
 
-        private void SaveToJson()
-        {
-            try
-            {
-                string fileName = "Ampumatulokset.json";
-                string jsonString = JsonSerializer.Serialize(ampumapäiväkirja);
-                File.WriteAllText(fileName, jsonString);
-                //MessageBox.Show("Tallennettu onnistuneesti.");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Virhe tallennuksessa");
-            }
-        }
-
         private void TallennaTiedot_Click(object sender, RoutedEventArgs e)
         {
             if (!double.TryParse(txtAmpumaradanPituus.Text, out double ampumaradanPituus))
@@ -80,57 +65,65 @@ namespace Ampumapäiväkirjakonsoli
                 return;
             }
 
-            bool tallennusOnnistui = true;
-
-            // Käy läpi kaikki DataGrid-komponentissa olevat rivit
-            foreach (var item in dataGrid.Items)
+            foreach (Ampuja ampujaDataGridista in dataGrid.Items)
             {
-                if (item is Ampuja ampujaDataGridista)
-                {   // Tarkistetaan, että tiedot on syötetty datagridin kenttiin.
-                    if (!string.IsNullOrWhiteSpace(ampujaDataGridista.Etunimi) &&
-                        !string.IsNullOrWhiteSpace(ampujaDataGridista.Sukunimi) &&
-                        ampujaDataGridista.LaukaustenMäärä > 0 &&
-                        ampujaDataGridista.Kokonaistulos >= 0) // Estetään miinustulokset
+                if (!string.IsNullOrWhiteSpace(ampujaDataGridista.Etunimi) &&
+                    !string.IsNullOrWhiteSpace(ampujaDataGridista.Sukunimi) &&
+                    ampujaDataGridista.LaukaustenMäärä > 0 &&
+                    ampujaDataGridista.Kokonaistulos >= 0)
+                {
+                    // Tarkistetaan, onko saman niminen ampuja jo listassa
+                    var samaAmpuja = ampumapäiväkirja.FirstOrDefault(a =>
+                        a.Etunimi.Equals(ampujaDataGridista.Etunimi, StringComparison.OrdinalIgnoreCase) &&
+                        a.Sukunimi.Equals(ampujaDataGridista.Sukunimi, StringComparison.OrdinalIgnoreCase));
 
+                    if (samaAmpuja == null)
                     {
-                        // Luo uusi Ampuja-olio jokaiselta riviltä
-                        var uusiAmpuja = new Ampuja
+                        // Jos saman nimistä ampujaa ei ole listassa, lisätään uusi
+                        ampumapäiväkirja.Add(new Ampuja
                         {
                             Etunimi = ampujaDataGridista.Etunimi,
                             Sukunimi = ampujaDataGridista.Sukunimi,
-                            Päivämäärä = DateTime.Now,
-                            AmpumaradanPituus = ampumaradanPituus,
                             LaukaustenMäärä = ampujaDataGridista.LaukaustenMäärä,
                             Kokonaistulos = ampujaDataGridista.Kokonaistulos,
-                            AmmunnanKuvaus = txtKuvaus.Text,
-                        };
-
-                        // Lisää uusi ampuja ampumapäiväkirja-listaan
-                        ampumapäiväkirja.Add(uusiAmpuja);
+                            Päivämäärä = DateTime.Now,
+                            AmpumaradanPituus = ampumaradanPituus,
+                            AmmunnanKuvaus = txtKuvaus.Text
+                        });
                     }
                     else
                     {
-                        MessageBox.Show("Kaikkia pakollisia tietoja ei ole täytetty tai laukaustenmäärä on 0. Tarkista tiedot!");
-                        tallennusOnnistui = false;
-                        break;
+                        // Jos saman niminen ampuja on jo listassa, lisätään uusi ammuntakerta uutena merkintänä
+                        ampumapäiväkirja.Add(new Ampuja
+                        {
+                            Etunimi = ampujaDataGridista.Etunimi,
+                            Sukunimi = ampujaDataGridista.Sukunimi,
+                            LaukaustenMäärä = ampujaDataGridista.LaukaustenMäärä,
+                            Kokonaistulos = ampujaDataGridista.Kokonaistulos,
+                            Päivämäärä = DateTime.Now,
+                            AmpumaradanPituus = ampumaradanPituus,
+                            AmmunnanKuvaus = txtKuvaus.Text
+                        });
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Kaikkia pakollisia tietoja ei ole täytetty tai laukausten määrä on 0. Tarkista tiedot!");
+                    return;
+                }
             }
-            
-            if (tallennusOnnistui)
-            {
-                SaveToJson();
-                MessageBox.Show("Ammunnan tiedot tallennettu!");
-                TyhjennäKentät(); // Tyhjennä kentät tallennuksen jälkeen
-            }       
+
+            AmpumapäiväkirjaJsonToiminnot.Tallenna(ampumapäiväkirja);
+            MessageBox.Show("Ammunnan tiedot tallennettu onnistuneesti!");
+            TyhjennäKentät();
         }
 
         private void TyhjennäKentät()
         {
             // Tyhjennä kaikki kentät tallennuksen jälkeen
-            txtAmpumaradanPituus.Text = string.Empty;
-            txtAmpujienMäärä.Text = string.Empty;
-            txtKuvaus.Text = string.Empty;
+            txtAmpumaradanPituus.Clear();
+            txtAmpujienMäärä.Clear();
+            txtKuvaus.Clear();
             dataGrid.Items.Clear();
             txtOhje.Text = "Ohje: Aloita syöttämällä ampumaradan pituus sekä ampujien määrä.";
         }
@@ -142,7 +135,7 @@ namespace Ampumapäiväkirjakonsoli
             txtAmpujienMäärä.Clear();
             txtKuvaus.Clear();
             dataGrid.Items.Clear();
-            txtOhje.Text = "Ohje: Aloita syöttämällä ampumaradan pituus sekä ampujien määrä.";
+            txtOhje.Text = "Ohje: Aloita syöttämällä ampumaradan pituus.";
         }
 
         private void txtAmpumaradanPituus_GotFocus(object sender, RoutedEventArgs e)

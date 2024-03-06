@@ -19,38 +19,27 @@ namespace Ampumapäiväkirjakonsoli
         public TulostenTarkastelu(List<Ampuja> ampumapäiväkirja, MainWindow mainWindow)
         {
             InitializeComponent();
-            this.ampumapäiväkirja = ampumapäiväkirja;
+            this.ampumapäiväkirja = AmpumapäiväkirjaJsonToiminnot.Lataa();
             this.mainWindow = mainWindow;
+            
+            PäivitäAmpujanNimetComboBoxiin();
+        }
+        private void PäivitäAmpujanNimetComboBoxiin()
+        {
+            cmbAmpujat.Items.Clear(); // Tyhjennetään ComboBox ensin
 
-            if (ampumapäiväkirja.Count == 0)
-            {
-                MergeJsonData();
-            }
-
-            // Suodatetaan nimet
             var uniikitNimet = ampumapäiväkirja
                 .Select(ampuja => ampuja.Etunimi + " " + ampuja.Sukunimi)
                 .Distinct()
                 .ToList();
-
-            // Lisätään "uniikit" nimet ComboBoxiin
+            MessageBox.Show($"Löydetty {uniikitNimet.Count} uniikkia nimeä.");
+            
             foreach (var nimi in uniikitNimet)
             {
                 cmbAmpujat.Items.Add(nimi);
             }
         }
 
-        private void MergeJsonData()
-        {
-            string fileName = "Ampumatulokset.json";
-            if (File.Exists(fileName))
-            {
-                string previousJson = File.ReadAllText(fileName);
-                List<Ampuja> previousData = JsonSerializer.Deserialize<List<Ampuja>>(previousJson);
-
-                ampumapäiväkirja.AddRange(previousData);
-            }
-        }
         private void cmbAmpujat_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
@@ -120,6 +109,14 @@ namespace Ampumapäiväkirjakonsoli
                     column.Width = DataGridLength.Auto;
                 }
             }
+        }
+
+        private void PoistaValitutRivit_Click(object sender, RoutedEventArgs e)
+        {
+            ampumapäiväkirja = ampumapäiväkirja.Where(a => !a.onChekattu).ToList();
+            dgAmmunnat.ItemsSource = null; // Tyhjennä DataGrid
+            dgAmmunnat.ItemsSource = ampumapäiväkirja; // Päivitä DataGrid uudella listalla
+            AmpumapäiväkirjaJsonToiminnot.Tallenna(ampumapäiväkirja); // Tallenna muutokset JSON-tiedostoon
         }
 
 
