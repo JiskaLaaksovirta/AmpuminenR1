@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "RxylevLDz8M7IbtAjV4J9NnKskPFnq6Mond+FLCnCn6wR+jG6l6lEGaVbHnMQ4UYj24cQKN/nWO0+NZojsPA1Q==",
+  "dgSpecHash": "0QmSwbXrN7RYfzqdqwmL2/UaiDIPwVYXlo1vfvivWcHClbmOiC/H7x5zDubiUuO/G0Bxj5HGiGHEA5ARnyEuhw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\inkak\\Documents\\Ohjelmistokehitys\\Inkan gitit\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj",
-=======
-  "dgSpecHash": "PAWao2FO/7LV9u+gmk+EANbd7Fv+/wqo5SJIF1PwozgwJABNZGfZJAISC0Z/JZ5iEWr79080/Swl7HBQzXxp6Q==",
-  "success": true,
-  "projectFilePath": "C:\\Ohjelmistokehitys\\Jiskan Gitit\\AmpuminenR1\\AmpuminenR1\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj",
->>>>>>> c66dcab6b77c925fe19b559e09548ebf8a4b9088
+  "projectFilePath": "C:\\Users\\inkak\\Desktop\\Jiskan versio\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\inkak\\Desktop\\Jiskan versio\\AmpuminenR1\\Ampumapäiväkirjakonsoli\\Ampumapäiväkirjakonsoli\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

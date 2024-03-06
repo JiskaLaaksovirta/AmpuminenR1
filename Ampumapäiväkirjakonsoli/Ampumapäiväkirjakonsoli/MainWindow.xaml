@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ampumapäiväkirjakonsoli"
         mc:Ignorable="d"
-<<<<<<< HEAD
         Title="MainWindow" Height="900" Width="1100" MinWidth="900" MinHeight="500">
 
     <Grid Background="{DynamicResource Backdrop}">
@@ -18,15 +17,7 @@
                 <MenuItem Header="Pelkistetty teema" Click="PelkistettyThemeClick"/>
             </ContextMenu>
         </Grid.ContextMenu>
-            
-        
-=======
-        Title="MainWindow" Height="900" Width="1100" MinWidth="900" MinHeight="500" > 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/camo.jpg" Stretch="None" Opacity="0.5"/>
-        </Grid.Background>
->>>>>>> c66dcab6b77c925fe19b559e09548ebf8a4b9088
+
         <StackPanel Orientation="Horizontal" Margin="0,55,0,0" Height="90" VerticalAlignment="Top" HorizontalAlignment="Center">
             <StackPanel.BindingGroup>
                 <BindingGroup/>
