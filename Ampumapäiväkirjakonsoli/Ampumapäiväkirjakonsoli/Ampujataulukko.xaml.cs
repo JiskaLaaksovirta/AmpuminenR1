@@ -10,7 +10,7 @@ namespace Ampumapäiväkirjakonsoli
 
     public partial class Ampujataulukko : Window
     {
-        List<Ampuja> ampumapäiväkirja = [];
+        private List<Ampuja> ampumapäiväkirja = [];
         private MainWindow mainWindow;
 
         public Ampujataulukko( List<Ampuja> ampumapäiväkirja, MainWindow mainWindow)
@@ -20,8 +20,10 @@ namespace Ampumapäiväkirjakonsoli
             this.mainWindow = mainWindow;
 
             this.DataContext = this.ampumapäiväkirja;
-            DispatcherTimer LiveTime = new DispatcherTimer();
-            LiveTime.Interval = TimeSpan.FromSeconds(1);
+            DispatcherTimer LiveTime = new()
+            {
+                Interval = TimeSpan.FromSeconds(1)
+            };
             LiveTime.Tick += timer_Tick;
             LiveTime.Start();
         }
@@ -65,6 +67,8 @@ namespace Ampumapäiväkirjakonsoli
                 return;
             }
 
+            var olemassaOlevaAmpumapäiväkirja = AmpumapäiväkirjaJsonToiminnot.Lataa(); // Lataa olemassa olevat tiedot tiedostosta
+
             foreach (Ampuja ampujaDataGridista in dataGrid.Items)
             {
                 if (!string.IsNullOrWhiteSpace(ampujaDataGridista.Etunimi) &&
@@ -72,39 +76,17 @@ namespace Ampumapäiväkirjakonsoli
                     ampujaDataGridista.LaukaustenMäärä > 0 &&
                     ampujaDataGridista.Kokonaistulos >= 0)
                 {
-                    // Tarkistetaan, onko saman niminen ampuja jo listassa
-                    var samaAmpuja = ampumapäiväkirja.FirstOrDefault(a =>
-                        a.Etunimi.Equals(ampujaDataGridista.Etunimi, StringComparison.OrdinalIgnoreCase) &&
-                        a.Sukunimi.Equals(ampujaDataGridista.Sukunimi, StringComparison.OrdinalIgnoreCase));
-
-                    if (samaAmpuja == null)
+                    // Lisää uusi ampuja olemassa olevaan listaan
+                    olemassaOlevaAmpumapäiväkirja.Add(new Ampuja
                     {
-                        // Jos saman nimistä ampujaa ei ole listassa, lisätään uusi
-                        ampumapäiväkirja.Add(new Ampuja
-                        {
-                            Etunimi = ampujaDataGridista.Etunimi,
-                            Sukunimi = ampujaDataGridista.Sukunimi,
-                            LaukaustenMäärä = ampujaDataGridista.LaukaustenMäärä,
-                            Kokonaistulos = ampujaDataGridista.Kokonaistulos,
-                            Päivämäärä = DateTime.Now,
-                            AmpumaradanPituus = ampumaradanPituus,
-                            AmmunnanKuvaus = txtKuvaus.Text
-                        });
-                    }
-                    else
-                    {
-                        // Jos saman niminen ampuja on jo listassa, lisätään uusi ammuntakerta uutena merkintänä
-                        ampumapäiväkirja.Add(new Ampuja
-                        {
-                            Etunimi = ampujaDataGridista.Etunimi,
-                            Sukunimi = ampujaDataGridista.Sukunimi,
-                            LaukaustenMäärä = ampujaDataGridista.LaukaustenMäärä,
-                            Kokonaistulos = ampujaDataGridista.Kokonaistulos,
-                            Päivämäärä = DateTime.Now,
-                            AmpumaradanPituus = ampumaradanPituus,
-                            AmmunnanKuvaus = txtKuvaus.Text
-                        });
-                    }
+                        Etunimi = ampujaDataGridista.Etunimi,
+                        Sukunimi = ampujaDataGridista.Sukunimi,
+                        LaukaustenMäärä = ampujaDataGridista.LaukaustenMäärä,
+                        Kokonaistulos = ampujaDataGridista.Kokonaistulos,
+                        Päivämäärä = DateTime.Now,
+                        AmpumaradanPituus = ampumaradanPituus,
+                        AmmunnanKuvaus = txtKuvaus.Text
+                    });
                 }
                 else
                 {
@@ -113,10 +95,11 @@ namespace Ampumapäiväkirjakonsoli
                 }
             }
 
-            AmpumapäiväkirjaJsonToiminnot.Tallenna(ampumapäiväkirja);
+            AmpumapäiväkirjaJsonToiminnot.Tallenna(olemassaOlevaAmpumapäiväkirja); // Tallenna päivitetty lista tiedostoon
             MessageBox.Show("Ammunnan tiedot tallennettu onnistuneesti!");
             TyhjennäKentät();
         }
+
 
         private void TyhjennäKentät()
         {

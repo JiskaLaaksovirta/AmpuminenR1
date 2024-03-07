@@ -11,14 +11,16 @@ namespace Ampumapäiväkirjakonsoli
     public partial class MainWindow : Window
     {
 
-        List<Ampuja> ampumapäiväkirja = [];
+        private List<Ampuja> ampumapäiväkirja = [];
 
         public MainWindow()
         {
             {
                 InitializeComponent();
-                DispatcherTimer LiveTime = new DispatcherTimer();
-                LiveTime.Interval = TimeSpan.FromSeconds(1);
+                DispatcherTimer LiveTime = new()
+                {
+                    Interval = TimeSpan.FromSeconds(1)
+                };
                 LiveTime.Tick += timer_Tick;
                 LiveTime.Start();
             }
@@ -26,11 +28,18 @@ namespace Ampumapäiväkirjakonsoli
             {
                 Päivämäärä.Text = DateTime.Now.ToString("HH:mm - dddd,\ndd MMMM, yyyy");
             }
+
+            LataaTiedot();
+        }
+
+        private void LataaTiedot()
+        {
+        ampumapäiväkirja = AmpumapäiväkirjaJsonToiminnot.Lataa();
         }
 
         private void AloitaKirjaaminen_Click(object sender, RoutedEventArgs e)
         {
-            Ampujataulukko ampujataulukko = new Ampujataulukko(ampumapäiväkirja, this); // Välitä lista konstruktorille
+            Ampujataulukko ampujataulukko = new(ampumapäiväkirja, this);
             this.Hide();
             ampujataulukko.Show();
             
@@ -38,7 +47,7 @@ namespace Ampumapäiväkirjakonsoli
 
         private void NäytäTulokset_Click(object sender, RoutedEventArgs e)
         {
-            TulostenTarkastelu tulostenTarkasteluIkkuna = new TulostenTarkastelu(ampumapäiväkirja, this);
+            TulostenTarkastelu tulostenTarkasteluIkkuna = new(ampumapäiväkirja, this);
             this.Hide();
             tulostenTarkasteluIkkuna.Show();
             
@@ -50,11 +59,6 @@ namespace Ampumapäiväkirjakonsoli
             Application.Current.Shutdown();
         }
 
-        private string InputBox(string prompt)
-        {
-            Console.WriteLine(prompt);
-            return Console.ReadLine();
-        }
 
         private void VihreäThemeClick(object sender, RoutedEventArgs e)
         {

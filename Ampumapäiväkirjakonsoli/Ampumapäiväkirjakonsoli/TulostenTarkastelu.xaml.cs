@@ -6,12 +6,13 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.IO;
+using System.Windows.Documents;
 
 namespace Ampumapäiväkirjakonsoli
 {
     public partial class TulostenTarkastelu : Window
     {
-        List<Ampuja> ampumapäiväkirja = [];
+        private List<Ampuja> ampumapäiväkirja = [];
 
         private MainWindow mainWindow;
 
@@ -62,60 +63,91 @@ namespace Ampumapäiväkirjakonsoli
 
         private void TulostaAmpumatiedot_Click(object sender, RoutedEventArgs e)
         {
-            PrintDialog printDialog = new PrintDialog();
-
-            // Määritellään tulostuksen sivun koko ja suunta
-            printDialog.PrintTicket.PageOrientation = System.Printing.PageOrientation.Portrait;
-            printDialog.PrintTicket.PageMediaSize = new System.Printing.PageMediaSize(System.Printing.PageMediaSizeName.ISOA4);
+            PrintDialog printDialog = new();
 
             if (printDialog.ShowDialog() == true)
             {
-                // Asetetaan sarakkeiden leveydet uudelleen ennen tulostusta
-                foreach (var column in dgAmmunnat.Columns)
+                FlowDocument document = new();
+                string selectedNimi = cmbAmpujat.SelectedItem?.ToString();
+
+                // Otsikko ampujalle
+                Paragraph otsikko = new(new Run($"Ampuja: {selectedNimi}"))
                 {
-                    if (column.Header.ToString() == "Ammunnan kuvaus")
+                    FontSize = 16,
+                    FontStyle = FontStyles.Italic
+                };
+                document.Blocks.Add(otsikko);
+
+                // Luo taulukko ampumakerran perustiedoille
+                Table ammuntaTaulukko = new();
+                // Lisätään sarakkeet ja asetetaan niiden leveydet
+                ammuntaTaulukko.Columns.Add(new TableColumn { Width = new GridLength(1, GridUnitType.Star) });
+                ammuntaTaulukko.Columns.Add(new TableColumn { Width = new GridLength(1, GridUnitType.Star) });
+                ammuntaTaulukko.Columns.Add(new TableColumn { Width = new GridLength(1, GridUnitType.Star) });
+                ammuntaTaulukko.Columns.Add(new TableColumn { Width = new GridLength(1, GridUnitType.Star) });
+
+                // Lisää otsikkorivi taulukkoon
+                TableRowGroup headerRowGroup = new();
+                TableRow headerRow = new TableRow();
+                headerRow.Cells.Add(new TableCell(new Paragraph(new Run("Päivämäärä"))));
+                headerRow.Cells.Add(new TableCell(new Paragraph(new Run("Laukausten määrä"))));
+                headerRow.Cells.Add(new TableCell(new Paragraph(new Run("Kokonaistulos"))));
+                headerRow.Cells.Add(new TableCell(new Paragraph(new Run("Radan pituus"))));
+                headerRowGroup.Rows.Add(headerRow);
+                ammuntaTaulukko.RowGroups.Add(headerRowGroup);
+
+                // Lisää tietorivit taulukkoon
+                TableRowGroup dataRowGroup = new();
+                var ampujanAmpumakerrat = ampumapäiväkirja.Where(ampuja => (ampuja.Etunimi + " " + ampuja.Sukunimi) == selectedNimi).ToList();
+
+                foreach (var ampuja in ampujanAmpumakerrat)
+                {
+                    TableRow dataRow = new TableRow();
+                    dataRow.Cells.Add(new TableCell(new Paragraph(new Run(ampuja.Päivämäärä.ToShortDateString()))));
+                    dataRow.Cells.Add(new TableCell(new Paragraph(new Run(ampuja.LaukaustenMäärä.ToString()))));
+                    dataRow.Cells.Add(new TableCell(new Paragraph(new Run(ampuja.Kokonaistulos.ToString()))));
+                    dataRow.Cells.Add(new TableCell(new Paragraph(new Run($"{ampuja.AmpumaradanPituus} m"))));
+                    dataRowGroup.Rows.Add(dataRow);
+                }
+                ammuntaTaulukko.RowGroups.Add(dataRowGroup);
+                document.Blocks.Add(ammuntaTaulukko);
+
+                // Ammunnan kuvaus ja kuvauspäivämäärä taulukon jälkeen
+                foreach (var ampuja in ampujanAmpumakerrat)
+                {
+                    // Kuvauspäivämäärä
+                    Paragraph kuvausPäivämäärä = new(new Run($"Kuvaus ammunnasta {ampuja.Päivämäärä.ToShortDateString()}:"))
                     {
-                        column.Width = new DataGridLength(1, DataGridLengthUnitType.Star);
-                    }
-                    else
+                        FontWeight = FontWeights.Bold
+                    };
+                    document.Blocks.Add(kuvausPäivämäärä);
+
+                    // Ammunnan kuvaus
+                    Paragraph ammunnanKuvaus = new(new Run(ampuja.AmmunnanKuvaus))
                     {
-                        column.Width = new DataGridLength(1, DataGridLengthUnitType.Auto);
-                    }
+                        FontSize = 12
+                    };
+                    document.Blocks.Add(ammunnanKuvaus);
+
+                    // Välilyönti kierrosten välille
+                    document.Blocks.Add(new Paragraph(new Run(" ")));
                 }
 
-                // Skaalataan DataGrid sopimaan tulostusalueelle
-                double scale = Math.Min(printDialog.PrintableAreaWidth / dgAmmunnat.ActualWidth, printDialog.PrintableAreaHeight / dgAmmunnat.ActualHeight);
-                var transform = new TransformGroup();
-                transform.Children.Add(new ScaleTransform(scale, scale));
-                transform.Children.Add(new TranslateTransform(0, 0));
-                dgAmmunnat.LayoutTransform = transform;
-
-                Size pageSize = new Size(printDialog.PrintableAreaWidth, printDialog.PrintableAreaHeight);
-
-                // Asetetaan DataGridin sijainti ja koko
-                dgAmmunnat.Measure(pageSize);
-                dgAmmunnat.Arrange(new Rect(new Point(0, 0), pageSize));
-
-                // Tulostetaan DataGrid
-                printDialog.PrintVisual(dgAmmunnat, "Ampumapäiväkirja");
-
-                // Palautetaan DataGridin ja sarakkeiden alkuperäinen kokoonpano tulostuksen jälkeen
-                dgAmmunnat.LayoutTransform = null;
-                dgAmmunnat.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
-                dgAmmunnat.Arrange(new Rect(dgAmmunnat.DesiredSize));
-                foreach (var column in dgAmmunnat.Columns)
-                {
-                    column.Width = DataGridLength.Auto;
-                }
+                // Tulostetaan FlowDocument
+                IDocumentPaginatorSource idpSource = document;
+                printDialog.PrintDocument(idpSource.DocumentPaginator, "Ampumapäiväkirja");
             }
         }
+
+
+
 
         private void PoistaValitutRivit_Click(object sender, RoutedEventArgs e)
         {
             ampumapäiväkirja = ampumapäiväkirja.Where(a => !a.onChekattu).ToList();
-            dgAmmunnat.ItemsSource = null; // Tyhjennä DataGrid
-            dgAmmunnat.ItemsSource = ampumapäiväkirja; // Päivitä DataGrid uudella listalla
-            AmpumapäiväkirjaJsonToiminnot.Tallenna(ampumapäiväkirja); // Tallenna muutokset JSON-tiedostoon
+            dgAmmunnat.ItemsSource = null; // Tyhjennetään DataGrid
+            dgAmmunnat.ItemsSource = ampumapäiväkirja;
+            AmpumapäiväkirjaJsonToiminnot.Tallenna(ampumapäiväkirja); // Tallennetaan muutokset JSON-tiedostoon
         }
 
 
