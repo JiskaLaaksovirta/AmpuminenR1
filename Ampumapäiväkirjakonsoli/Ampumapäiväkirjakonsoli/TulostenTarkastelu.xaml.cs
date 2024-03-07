@@ -26,13 +26,12 @@ namespace Ampumapäiväkirjakonsoli
         }
         private void PäivitäAmpujanNimetComboBoxiin()
         {
-            cmbAmpujat.Items.Clear(); // Tyhjennetään ComboBox ensin
+            cmbAmpujat.Items.Clear(); 
 
             var uniikitNimet = ampumapäiväkirja
                 .Select(ampuja => ampuja.Etunimi + " " + ampuja.Sukunimi)
                 .Distinct()
                 .ToList();
-            MessageBox.Show($"Löydetty {uniikitNimet.Count} uniikkia nimeä.");
             
             foreach (var nimi in uniikitNimet)
             {
@@ -84,7 +83,7 @@ namespace Ampumapäiväkirjakonsoli
                     }
                 }
 
-                // Skaalaa DataGrid sopimaan tulostusalueelle
+                // Skaalataan DataGrid sopimaan tulostusalueelle
                 double scale = Math.Min(printDialog.PrintableAreaWidth / dgAmmunnat.ActualWidth, printDialog.PrintableAreaHeight / dgAmmunnat.ActualHeight);
                 var transform = new TransformGroup();
                 transform.Children.Add(new ScaleTransform(scale, scale));

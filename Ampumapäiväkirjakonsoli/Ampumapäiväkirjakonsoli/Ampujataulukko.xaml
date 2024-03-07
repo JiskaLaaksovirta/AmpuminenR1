@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Ampujataulukko" Height="900" Width="1100" MinWidth="950" MinHeight="750">
+        Title="Ampujataulukko" Height="900" Width="1100" MinWidth="800" MinHeight="800" MaxWidth="1980" MaxHeight="1080">
     <Grid Background="{DynamicResource Backdrop}">
 
         <Grid.ContextMenu>
@@ -17,23 +17,23 @@
         </Grid.ContextMenu>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="151"/>
             <!-- Rivi 0: Päivämäärä ja Aloita tulosten kirjaaminen -painike -->
-            <RowDefinition Height="Auto" MinHeight="699"/>
+            <RowDefinition/>
             <!-- Rivi 1: Syöttökentät ja niiden otsikot, DataGrid ja muut hallintaelementit -->
-            <RowDefinition Height="0*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <!--Rivi 0-->
         <!-- Napit ja tekstilaatikko tulosten näyttämiseen ja ohjelman sulkemiseen -->
-        <Button Content="Aloita tulosten kirjaaminen" MaxHeight="60" VerticalAlignment="Top" Height="81" Background="{DynamicResource Tulosten kirjaaminen}"
-                Click="AloitaKirjaaminen_Click" Grid.Row="0" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14" Margin="188,80,0,0" HorizontalAlignment="Left" Width="170"/>
+        <Button Content="Aloita tulosten kirjaaminen" MaxHeight="60" VerticalAlignment="Top" Background="{DynamicResource Tulosten kirjaaminen}"
+                Click="AloitaKirjaaminen_Click" Grid.Row="0" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14" Margin="198,86,0,0" HorizontalAlignment="Left" Width="166" Height="60"/>
 
-        <TextBox x:Name="Päivämäärä"  MaxHeight="60" Margin="188,-40,0,32" Grid.Row="0" Background="{DynamicResource Päivämäärä2}"  TextAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" BorderBrush="Black"
+        <TextBox x:Name="Päivämäärä"  MaxHeight="60" Margin="194,0,0,72" Grid.Row="0" Background="{DynamicResource Päivämäärä2}"  TextAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" BorderBrush="Black"
                   SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" FontSize="14" IsReadOnly="True" HorizontalAlignment="Left" Width="170" IsHitTestVisible="False"/>
 
 
-        <Button Content="Palaa päävalikkoon"  MaxHeight="60" Click="PoistuPäävalikkoon_Click" Margin="0,10,10,70" Background="#FFF7F8FA" 
+        <Button Content="Palaa päävalikkoon"  MaxHeight="60" Click="PoistuPäävalikkoon_Click" Margin="0,4,10,76" Background="#FFF7F8FA" 
                 FontFamily="Global Sans Serif" FontSize="14" Grid.Row="0" MaxWidth="170" HorizontalAlignment="Right" Width="170"/>
 
         <!--Rivi 0-->
@@ -48,65 +48,66 @@
         <!--Rivi 1-->
 
 
-        <TextBox x:Name="txtOhje" MaxHeight="60" TextAlignment="Center" Margin="12,7,0,626" TextWrapping="Wrap"
-                 Text="Ohje: Aloita syöttämällä ampumaradan pituus sekä ampujien määrä." BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14" HorizontalAlignment="Left" Width="348" Grid.Row="1" IsHitTestVisible="False"/>
+        <TextBox x:Name="txtOhje" MaxHeight="60" TextAlignment="Center" Margin="10,66,0,447" TextWrapping="Wrap" HorizontalAlignment="Left"
+                 Text="Ohje: Aloita syöttämällä ampumaradan pituus sekä ampujien määrä." BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14" IsHitTestVisible="False" Width="348" Grid.RowSpan="2"/>
 
-        <Label Content="Ampumaradan pituus (m):" Margin="12,78,0,551" Background="#FFF7F8FA" MaxHeight="50" BorderBrush="Black"
+        <Label Content="Ampumaradan pituus (m):" Margin="10,70,0,482" Background="#FFF7F8FA" MaxHeight="50" BorderBrush="Black"
                BorderThickness="1" FontFamily="Global Sans Serif" FontSize="14" HorizontalAlignment="Left" Width="348" Grid.Row="1" />
-        <TextBox x:Name="txtAmpumaradanPituus"  Margin="194,85,0,558" MaxLength="4" MaxHeight="34" BorderBrush="#FF4E5056" 
-                 SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" MaxWidth="157" MinWidth="157" MinHeight="36" GotFocus="txtAmpumaradanPituus_GotFocus" HorizontalAlignment="Left" Width="158" Grid.Row="1"/>
+        <TextBox x:Name="txtAmpumaradanPituus"  Margin="190,52,0,464" MaxLength="4" MaxHeight="34" BorderBrush="#FF4E5056" 
+                 SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" MaxWidth="157" MinWidth="157" MinHeight="36" GotFocus="txtAmpumaradanPituus_GotFocus" HorizontalAlignment="Left" Width="157" Grid.Row="1"/>
 
-        <Label Content="Ampujien määrä:"  Margin="12,148,0,503" Grid.Row="1" Background="#FFF7F8FA" MaxHeight="50"
-               BorderBrush="Black" BorderThickness="1" FontFamily="Global Sans Serif" FontSize="14" HorizontalAlignment="Left" Width="348"/>
-        <TextBox x:Name="txtAmpujienMäärä"  Margin="194,155,0,510" Grid.Row="1" MaxLength="2" MaxHeight="34" BorderBrush="#FF4E5056"
-                 SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" MaxWidth="157" MinWidth="157" MinHeight="34" GotFocus="txtAmpujienMäärä_GotFocus" HorizontalAlignment="Left" Width="158"/>
+        <Label Content="Ampujien määrä:"  Margin="10,131,0,434" Grid.Row="1" Background="#FFF7F8FA" MaxHeight="50"
+               BorderBrush="Black" BorderThickness="1" FontFamily="Global Sans Serif" FontSize="14" HorizontalAlignment="Left" MaxWidth="348" Width="354"/>
+        <TextBox x:Name="txtAmpujienMäärä"  Margin="190,127,0,430" MaxLength="2" MaxHeight="34" BorderBrush="#FF4E5056"
+                 SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" MaxWidth="157" MinWidth="157" MinHeight="34" GotFocus="txtAmpujienMäärä_GotFocus" HorizontalAlignment="Left" Width="161" Grid.Row="1"/>
         <!--Rivi 1-->
-        <Label x:Name="Kuvaus" Content="Kuvaus ammunnasta (valinnainen):" Grid.Row="1" Margin="12,207,0,232" Background="#FFF7F8FA" MaxHeight="250" BorderBrush="Black"
+        <Label x:Name="Kuvaus" Content="Kuvaus ammunnasta (valinnainen):" Grid.Row="1" Margin="10,318,0,43" Background="#FFF7F8FA"  BorderBrush="Black"
                BorderThickness="1" Foreground="Black" FontFamily="Global Sans Serif" FontSize="14" HorizontalAlignment="Left" Width="348" />
 
-        <TextBox x:Name="txtKuvaus" Grid.Row="1" Margin="23,252,0,277" AcceptsTab="True" MaxHeight="150" TextWrapping="Wrap" AcceptsReturn="True"
-                 Height="Auto" VerticalScrollBarVisibility="Auto" MaxLength="300" BorderBrush="#FF4E5056" SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" GotFocus="txtKuvaus_GotFocus" TextChanged="txtKuvaus_TextChanged" HorizontalAlignment="Left" Width="326" />
+        <TextBox x:Name="txtKuvaus" Grid.Row="1" Margin="24,367,0,86" AcceptsTab="True" TextWrapping="Wrap" AcceptsReturn="True"
+                 VerticalScrollBarVisibility="Auto"  BorderBrush="#FF4E5056" SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" 
+                 GotFocus="txtKuvaus_GotFocus" TextChanged="txtKuvaus_TextChanged" HorizontalAlignment="Left" Width="320" />
 
-        <Label x:Name="Laskuri" Content="0 / 300" Grid.Row="1" Margin="275,360,0,205" MaxHeight="20" FontFamily="Global Sans Serif" FontSize="10" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Width="74" />
+        <Label x:Name="Laskuri" Content="0 / 300" Grid.Row="1" Margin="281,0,0,19" FontFamily="Global Sans Serif" FontSize="10" HorizontalContentAlignment="Right" HorizontalAlignment="Left" MaxWidth="74" Width="66" Height="67" VerticalAlignment="Bottom" />
 
         <!--Rivi 1-->
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto"  HorizontalScrollBarVisibility="Auto" Margin="365,14,0,-15" Grid.RowSpan="2" >
-            <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Background="{DynamicResource dataGrid}" IsTabStop="True" BorderBrush="Black" RowHeight="30" MaxWidth="950"
-                      HorizontalScrollBarVisibility="Auto" FontFamily="Global Sans Serif" FontSize="14" Width="700" Height="550" >
-                <DataGrid.RowHeaderStyle>
-                    <Style/>
-                </DataGrid.RowHeaderStyle>
-                <DataGrid.Columns>
-                    <DataGridTemplateColumn Header="Etunimi" Width="25*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding Etunimi, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Sukunimi" Width="25*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding Sukunimi, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Laukaukset" Width="25*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding LaukaustenMäärä, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Kokonaistulos" Width="25*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding Kokonaistulos, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
-        </ScrollViewer>
+
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Background="{DynamicResource dataGrid}" IsTabStop="True" BorderBrush="Black" RowHeight="30"
+                      HorizontalScrollBarVisibility="Auto" FontFamily="Global Sans Serif" FontSize="14" Grid.Row="1" Margin="390,45,10,43" >
+            <DataGrid.RowHeaderStyle>
+                <Style/>
+            </DataGrid.RowHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Etunimi" Width="25*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Etunimi, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Sukunimi" Width="25*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Sukunimi, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Laukaukset" Width="25*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding LaukaustenMäärä, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Kokonaistulos" Width="25*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Kokonaistulos, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
     </Grid>
 </Window>
