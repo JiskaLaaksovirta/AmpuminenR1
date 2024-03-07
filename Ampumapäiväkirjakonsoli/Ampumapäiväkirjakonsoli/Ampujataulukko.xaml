@@ -64,11 +64,12 @@
         <Label x:Name="Kuvaus" Content="Kuvaus ammunnasta (valinnainen):" Grid.Row="1" Margin="10,318,0,43" Background="#FFF7F8FA"  BorderBrush="Black"
                BorderThickness="1" Foreground="Black" FontFamily="Global Sans Serif" FontSize="14" HorizontalAlignment="Left" Width="348" />
 
-        <TextBox x:Name="txtKuvaus" Grid.Row="1" Margin="24,367,0,86" AcceptsTab="True" TextWrapping="Wrap" AcceptsReturn="True"
+        <TextBox x:Name="txtKuvaus" Grid.Row="1" Margin="24,367,0,86" AcceptsTab="True" TextWrapping="Wrap" AcceptsReturn="True" MaxLength="300"
                  VerticalScrollBarVisibility="Auto"  BorderBrush="#FF4E5056" SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" 
                  GotFocus="txtKuvaus_GotFocus" TextChanged="txtKuvaus_TextChanged" HorizontalAlignment="Left" Width="320" />
 
-        <Label x:Name="Laskuri" Content="0 / 300" Grid.Row="1" Margin="281,0,0,19" FontFamily="Global Sans Serif" FontSize="10" HorizontalContentAlignment="Right" HorizontalAlignment="Left" MaxWidth="74" Width="66" Height="67" VerticalAlignment="Bottom" />
+        <Label x:Name="Laskuri" Content="0 / 300" Grid.Row="1" Margin="281,0,0,19" FontFamily="Global Sans Serif" FontSize="10" 
+               HorizontalContentAlignment="Right" HorizontalAlignment="Left" MaxWidth="74" Width="66" Height="67" VerticalAlignment="Bottom" />
 
         <!--Rivi 1-->
 
