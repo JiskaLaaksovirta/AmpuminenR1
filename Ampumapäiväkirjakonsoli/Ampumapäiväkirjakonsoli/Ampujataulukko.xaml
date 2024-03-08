@@ -29,8 +29,8 @@
         <Button Content="Aloita tulosten kirjaaminen" MaxHeight="60" VerticalAlignment="Top" Background="{DynamicResource Tulosten kirjaaminen}"
                 Click="AloitaKirjaaminen_Click" Grid.Row="0" BorderBrush="Black" FontFamily="Global Sans Serif" FontSize="14" Margin="198,86,0,0" HorizontalAlignment="Left" Width="166" Height="60"/>
 
-        <TextBox x:Name="Päivämäärä"  MaxHeight="60" Margin="194,0,0,72" Grid.Row="0" Background="{DynamicResource Päivämäärä2}"  TextAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" BorderBrush="Black"
-                  SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" FontSize="14" IsReadOnly="True" HorizontalAlignment="Left" Width="170" IsHitTestVisible="False"/>
+        <TextBox x:Name="Päivämäärä"  MaxHeight="60" Margin="198,0,0,72" Grid.Row="0" Background="{DynamicResource Päivämäärä2}"  TextAlignment="Center" VerticalContentAlignment="Center" TextWrapping="Wrap" BorderBrush="Black"
+                  SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" FontSize="14" IsReadOnly="True" HorizontalAlignment="Left" Width="166" IsHitTestVisible="False"/>
 
 
         <Button Content="Palaa päävalikkoon"  MaxHeight="60" Click="PoistuPäävalikkoon_Click" Margin="0,4,10,76" Background="#FFF7F8FA" 
@@ -61,20 +61,20 @@
         <TextBox x:Name="txtAmpujienMäärä"  Margin="190,127,0,430" MaxLength="2" MaxHeight="34" BorderBrush="#FF4E5056"
                  SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" MaxWidth="157" MinWidth="157" MinHeight="34" GotFocus="txtAmpujienMäärä_GotFocus" HorizontalAlignment="Left" Width="161" Grid.Row="1"/>
         <!--Rivi 1-->
-        <Label x:Name="Kuvaus" Content="Kuvaus ammunnasta (valinnainen):" Grid.Row="1" Margin="10,318,0,43" Background="#FFF7F8FA"  BorderBrush="Black"
+        <Label x:Name="Kuvaus" Content="Kuvaus ammunnasta (valinnainen):" Grid.Row="1" Margin="10,309,0,43" Background="#FFF7F8FA"  BorderBrush="Black"
                BorderThickness="1" Foreground="Black" FontFamily="Global Sans Serif" FontSize="14" HorizontalAlignment="Left" Width="348" />
 
-        <TextBox x:Name="txtKuvaus" Grid.Row="1" Margin="24,367,0,86" AcceptsTab="True" TextWrapping="Wrap" AcceptsReturn="True" MaxLength="300"
+        <TextBox x:Name="txtKuvaus" Grid.Row="1" Margin="24,359,0,95" AcceptsTab="True" TextWrapping="Wrap" AcceptsReturn="True" MaxLength="300"
                  VerticalScrollBarVisibility="Auto"  BorderBrush="#FF4E5056" SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" 
                  GotFocus="txtKuvaus_GotFocus" TextChanged="txtKuvaus_TextChanged" HorizontalAlignment="Left" Width="320" />
 
-        <Label x:Name="Laskuri" Content="0 / 300" Grid.Row="1" Margin="281,0,0,19" FontFamily="Global Sans Serif" FontSize="10" 
+        <Label x:Name="Laskuri" Content="0 / 300" Grid.Row="1" Margin="281,0,0,10" FontFamily="Global Sans Serif" FontSize="10" 
                HorizontalContentAlignment="Right" HorizontalAlignment="Left" MaxWidth="74" Width="66" Height="67" VerticalAlignment="Bottom" />
 
         <!--Rivi 1-->
 
         <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Background="{DynamicResource dataGrid}" IsTabStop="True" BorderBrush="Black" RowHeight="30"
-                      HorizontalScrollBarVisibility="Auto" FontFamily="Global Sans Serif" FontSize="14" Grid.Row="1" Margin="390,45,10,43" >
+                      HorizontalScrollBarVisibility="Auto" FontFamily="Global Sans Serif" FontSize="14" Grid.Row="1" Margin="390,58,10,43" SelectionUnit="CellOrRowHeader" SelectionMode="Single" >
             <DataGrid.RowHeaderStyle>
                 <Style/>
             </DataGrid.RowHeaderStyle>
