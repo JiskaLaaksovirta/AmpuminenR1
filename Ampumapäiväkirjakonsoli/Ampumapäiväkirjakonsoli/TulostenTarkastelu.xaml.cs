@@ -14,7 +14,7 @@ namespace Ampumapäiväkirjakonsoli
     {
         private List<Ampuja> ampumapäiväkirja = [];
 
-        private MainWindow mainWindow;
+        private readonly MainWindow mainWindow;
 
 
         public TulostenTarkastelu(List<Ampuja> ampumapäiväkirja, MainWindow mainWindow)
@@ -40,7 +40,7 @@ namespace Ampumapäiväkirjakonsoli
             }
         }
 
-        private void cmbAmpujat_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CmbAmpujat_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
             {
@@ -68,7 +68,7 @@ namespace Ampumapäiväkirjakonsoli
             if (printDialog.ShowDialog() == true)
             {
                 FlowDocument document = new();
-                string selectedNimi = cmbAmpujat.SelectedItem?.ToString();
+                string? selectedNimi = cmbAmpujat.SelectedItem?.ToString();
 
                 // Otsikko ampujalle
                 Paragraph otsikko = new(new Run($"Ampuja: {selectedNimi}"))
@@ -88,7 +88,7 @@ namespace Ampumapäiväkirjakonsoli
 
                 // Lisää otsikkorivi taulukkoon
                 TableRowGroup headerRowGroup = new();
-                TableRow headerRow = new TableRow();
+                TableRow headerRow = new();
                 headerRow.Cells.Add(new TableCell(new Paragraph(new Run("Päivämäärä"))));
                 headerRow.Cells.Add(new TableCell(new Paragraph(new Run("Laukausten määrä"))));
                 headerRow.Cells.Add(new TableCell(new Paragraph(new Run("Kokonaistulos"))));
@@ -102,7 +102,7 @@ namespace Ampumapäiväkirjakonsoli
 
                 foreach (var ampuja in ampujanAmpumakerrat)
                 {
-                    TableRow dataRow = new TableRow();
+                    TableRow dataRow = new();
                     dataRow.Cells.Add(new TableCell(new Paragraph(new Run(ampuja.Päivämäärä.ToShortDateString()))));
                     dataRow.Cells.Add(new TableCell(new Paragraph(new Run(ampuja.LaukaustenMäärä.ToString()))));
                     dataRow.Cells.Add(new TableCell(new Paragraph(new Run(ampuja.Kokonaistulos.ToString()))));
@@ -133,7 +133,7 @@ namespace Ampumapäiväkirjakonsoli
                     document.Blocks.Add(new Paragraph(new Run(" ")));
                 }
 
-                // Tulostetaan FlowDocument
+                // Tulostetaan tiedot
                 IDocumentPaginatorSource idpSource = document;
                 printDialog.PrintDocument(idpSource.DocumentPaginator, "Ampumapäiväkirja");
             }
@@ -144,10 +144,24 @@ namespace Ampumapäiväkirjakonsoli
 
         private void PoistaValitutRivit_Click(object sender, RoutedEventArgs e)
         {
+            // Tallennetaan valitun ampujan nimi ennen poistoa
+            string valittuNimi = cmbAmpujat.SelectedItem?.ToString() ?? string.Empty;
+
+            // Poistetaan valitut rivit ampumapäiväkirjasta
             ampumapäiväkirja = ampumapäiväkirja.Where(a => !a.onChekattu).ToList();
-            dgAmmunnat.ItemsSource = null; // Tyhjennetään DataGrid
-            dgAmmunnat.ItemsSource = ampumapäiväkirja;
-            AmpumapäiväkirjaJsonToiminnot.Tallenna(ampumapäiväkirja); // Tallennetaan muutokset JSON-tiedostoon
+
+            // Päivitä DataGridin tietolähde
+            dgAmmunnat.ItemsSource = null; 
+            dgAmmunnat.ItemsSource = ampumapäiväkirja; 
+
+            // Tallennetaan muutokset JSON-tiedostoon
+            AmpumapäiväkirjaJsonToiminnot.Tallenna(ampumapäiväkirja);
+
+            // Päivitetään Vetolaatikon sisältö vastaamaan muutoksia
+            PäivitäAmpujanNimetComboBoxiin();
+
+            // Katsotaan että ampujan nimi pysyy vetolaatikossa
+            cmbAmpujat.SelectedItem = cmbAmpujat.Items.Cast<string>().FirstOrDefault(nimi => nimi.Equals(valittuNimi));
         }
 
 

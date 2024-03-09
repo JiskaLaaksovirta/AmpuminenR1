@@ -12,7 +12,7 @@ namespace Ampumapäiväkirjakonsoli
     {
         public static void ChangeTheme(Uri themeuri)
         {
-            ResourceDictionary theme = new ResourceDictionary() {Source = themeuri };
+            ResourceDictionary theme = new() { Source = themeuri };
 
             App.Current.Resources.Clear();
             App.Current.Resources.MergedDictionaries.Add(theme);

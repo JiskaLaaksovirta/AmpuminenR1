@@ -10,8 +10,8 @@ namespace Ampumapäiväkirjakonsoli
 
     public partial class Ampujataulukko : Window
     {
-        private List<Ampuja> ampumapäiväkirja = [];
-        private MainWindow mainWindow;
+        private readonly List<Ampuja> ampumapäiväkirja = [];
+        private readonly MainWindow mainWindow;
 
         public Ampujataulukko( List<Ampuja> ampumapäiväkirja, MainWindow mainWindow)
         {
@@ -24,10 +24,10 @@ namespace Ampumapäiväkirjakonsoli
             {
                 Interval = TimeSpan.FromSeconds(1)
             };
-            LiveTime.Tick += timer_Tick;
+            LiveTime.Tick += Timer_Tick;
             LiveTime.Start();
         }
-        void timer_Tick(object sender, EventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)
         {
             Päivämäärä.Text = DateTime.Now.ToString("HH:mm - dddd,\ndd MMMM, yyyy");
         }
@@ -95,7 +95,7 @@ namespace Ampumapäiväkirjakonsoli
                 }
             }
 
-            AmpumapäiväkirjaJsonToiminnot.Tallenna(olemassaOlevaAmpumapäiväkirja); // Tallenna päivitetty lista tiedostoon
+            AmpumapäiväkirjaJsonToiminnot.Tallenna(olemassaOlevaAmpumapäiväkirja); // Tallennetaan päivitetty lista tiedostoon
             MessageBox.Show("Ammunnan tiedot tallennettu onnistuneesti!");
             TyhjennäKentät();
         }
@@ -113,7 +113,7 @@ namespace Ampumapäiväkirjakonsoli
 
         private void KeskeytaKirjaus_Click(object sender, RoutedEventArgs e)
         {
-            // Keskeytä kirjaus- toiminto
+            // Keskeytetään kirjaus- toiminto
             txtAmpumaradanPituus.Clear();
             txtAmpujienMäärä.Clear();
             txtKuvaus.Clear();
@@ -121,21 +121,21 @@ namespace Ampumapäiväkirjakonsoli
             txtOhje.Text = "Ohje: Aloita syöttämällä ampumaradan pituus.";
         }
 
-        private void txtAmpumaradanPituus_GotFocus(object sender, RoutedEventArgs e)
+        private void TxtAmpumaradanPituus_GotFocus(object sender, RoutedEventArgs e)
         {
             txtOhje.Text = "Ohje: Syötä ampumaradan pituus metreinä.";
         }
 
-        private void txtAmpujienMäärä_GotFocus(object sender, RoutedEventArgs e)
+        private void TxtAmpujienMäärä_GotFocus(object sender, RoutedEventArgs e)
         {
-            txtOhje.Text = "Ohje: Syötä ampujien määrä lukuina.";
+            txtOhje.Text = "Ohje: Syötä ampujien määrä numeroina.";
         }
 
-        private void txtKuvaus_GotFocus(object sender, RoutedEventArgs e)
+        private void TxtKuvaus_GotFocus(object sender, RoutedEventArgs e)
         {
             txtOhje.Text = "Ohje: Tallenna tarvittaessa lisätietoja kierroksesta. Kuvaus tallentuu jokaiselle ampujalle. Max. 300 merkkiä.";
         }
-        private void txtKuvaus_TextChanged(object sender, TextChangedEventArgs e)
+        private void TxtKuvaus_TextChanged(object sender, TextChangedEventArgs e)
         {
             // Päivitä merkkimäärä laskurin teksti
             int merkkimaara = txtKuvaus.Text.Length;

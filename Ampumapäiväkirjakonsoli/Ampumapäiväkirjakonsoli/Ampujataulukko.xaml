@@ -54,19 +54,19 @@
         <Label Content="Ampumaradan pituus (m):" Margin="10,70,0,482" Background="#FFF7F8FA" MaxHeight="50" BorderBrush="Black"
                BorderThickness="1" FontFamily="Global Sans Serif" FontSize="14" HorizontalAlignment="Left" Width="348" Grid.Row="1" />
         <TextBox x:Name="txtAmpumaradanPituus"  Margin="190,52,0,464" MaxLength="4" MaxHeight="34" BorderBrush="#FF4E5056" 
-                 SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" MaxWidth="157" MinWidth="157" MinHeight="36" GotFocus="txtAmpumaradanPituus_GotFocus" HorizontalAlignment="Left" Width="157" Grid.Row="1"/>
+                 SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" MaxWidth="157" MinWidth="157" MinHeight="36" GotFocus="TxtAmpumaradanPituus_GotFocus" HorizontalAlignment="Left" Width="157" Grid.Row="1"/>
 
         <Label Content="Ampujien määrä:"  Margin="10,131,0,434" Grid.Row="1" Background="#FFF7F8FA" MaxHeight="50"
                BorderBrush="Black" BorderThickness="1" FontFamily="Global Sans Serif" FontSize="14" HorizontalAlignment="Left" MaxWidth="348" Width="354"/>
         <TextBox x:Name="txtAmpujienMäärä"  Margin="190,127,0,430" MaxLength="2" MaxHeight="34" BorderBrush="#FF4E5056"
-                 SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" MaxWidth="157" MinWidth="157" MinHeight="34" GotFocus="txtAmpujienMäärä_GotFocus" HorizontalAlignment="Left" Width="161" Grid.Row="1"/>
+                 SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" MaxWidth="157" MinWidth="157" MinHeight="34" GotFocus="TxtAmpujienMäärä_GotFocus" HorizontalAlignment="Left" Width="161" Grid.Row="1"/>
         <!--Rivi 1-->
         <Label x:Name="Kuvaus" Content="Kuvaus ammunnasta (valinnainen):" Grid.Row="1" Margin="10,309,0,43" Background="#FFF7F8FA"  BorderBrush="Black"
                BorderThickness="1" Foreground="Black" FontFamily="Global Sans Serif" FontSize="14" HorizontalAlignment="Left" Width="348" />
 
         <TextBox x:Name="txtKuvaus" Grid.Row="1" Margin="24,359,0,95" AcceptsTab="True" TextWrapping="Wrap" AcceptsReturn="True" MaxLength="300"
                  VerticalScrollBarVisibility="Auto"  BorderBrush="#FF4E5056" SelectionBrush="#FF7A8270" FontFamily="Global Sans Serif" 
-                 GotFocus="txtKuvaus_GotFocus" TextChanged="txtKuvaus_TextChanged" HorizontalAlignment="Left" Width="320" />
+                 GotFocus="TxtKuvaus_GotFocus" TextChanged="TxtKuvaus_TextChanged" HorizontalAlignment="Left" Width="320" />
 
         <Label x:Name="Laskuri" Content="0 / 300" Grid.Row="1" Margin="281,0,0,10" FontFamily="Global Sans Serif" FontSize="10" 
                HorizontalContentAlignment="Right" HorizontalAlignment="Left" MaxWidth="74" Width="66" Height="67" VerticalAlignment="Bottom" />

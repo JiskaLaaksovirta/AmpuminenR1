@@ -6,13 +6,13 @@ namespace Ampumapäiväkirjakonsoli
     public class Ampuja : INotifyPropertyChanged
     {
         private bool OnChekattu;
-        private string etunimi;
-        private string sukunimi;
+        private string? etunimi;
+        private string? sukunimi;
         private int laukaustenMäärä;
         private double kokonaistulos;
         private DateTime päivämäärä;
         private double ampumaradanPituus;
-        private string ammunnanKuvaus;
+        private string? ammunnanKuvaus;
 
         public event PropertyChangedEventHandler PropertyChanged;
 

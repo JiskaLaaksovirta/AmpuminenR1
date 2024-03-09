@@ -22,7 +22,7 @@
         <!-- Valikko ampujien nimiä varten -->
         <ComboBox x:Name="cmbAmpujat" IsEditable="True" Text="Ampujan valinta" IsReadOnly="True" Grid.Row="0"
           MaxWidth="180" MinWidth="180" HorizontalContentAlignment="Center"
-          SelectionChanged="cmbAmpujat_SelectionChanged" FontFamily="Global Sans Serif"
+          SelectionChanged="CmbAmpujat_SelectionChanged" FontFamily="Global Sans Serif"
           FontSize="14" HorizontalAlignment="Left"  Margin="450,20,0,36"/>
 
         <!-- DataGrid ammunnan tietojen näyttämiseen -->

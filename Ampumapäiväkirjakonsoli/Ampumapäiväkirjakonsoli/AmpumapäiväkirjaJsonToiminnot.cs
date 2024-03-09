@@ -7,7 +7,7 @@ namespace Ampumapäiväkirjakonsoli
 {
     public static class AmpumapäiväkirjaJsonToiminnot
     {
-        private static string fileName = "Ampumatulokset.json";
+        private static readonly string fileName = "Ampumatulokset.json";
 
         public static void Tallenna(List<Ampuja> ampumapäiväkirja)
         {
@@ -30,7 +30,7 @@ namespace Ampumapäiväkirjakonsoli
                 return JsonSerializer.Deserialize<List<Ampuja>>(jsonString);
             }
 
-            return new List<Ampuja>();
+            return [];
         }
     }
 }
